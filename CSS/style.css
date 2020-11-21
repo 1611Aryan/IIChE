@@ -1,0 +1,102 @@
+:root {
+  --loadingBg: #aaaaaa;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+}
+
+.loading {
+  z-index: 9999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--loadingBg);
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.loading svg {
+  overflow: visible;
+  height: 60%;
+}
+
+.loading svg #animateUp {
+  -webkit-animation: rise 2s infinite ease-in-out alternate;
+          animation: rise 2s infinite ease-in-out alternate;
+}
+
+.loading svg .bubbles {
+  -webkit-animation: bubble 2s infinite ease-in-out alternate;
+          animation: bubble 2s infinite ease-in-out alternate;
+}
+
+.loading svg .bubbles:nth-of-type(2n) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes rise {
+  to {
+    -webkit-transform: translateY(-5.5%);
+            transform: translateY(-5.5%);
+  }
+}
+
+@keyframes rise {
+  to {
+    -webkit-transform: translateY(-5.5%);
+            transform: translateY(-5.5%);
+  }
+}
+
+@-webkit-keyframes bubble {
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes bubble {
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background: #256;
+}
+/*# sourceMappingURL=style.css.map */
