@@ -1,9 +1,9 @@
 :root {
   --loadingBg: #aaaaaa;
-  --homeBg: #000000;
+  --homeBg: #121312;
 }
 
-.loading {
+.loading, header nav, header nav picture, header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,8 +98,56 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
   background: #333333;
+}
+
+header svg {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+header svg path {
+  fill: #333333;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+header nav picture {
+  margin-top: 2%;
+  width: 30%;
+}
+
+header nav picture img {
+  width: 100%;
+}
+
+header nav ul {
+  width: 60%;
+  list-style-type: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul li {
+  color: white;
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .home {

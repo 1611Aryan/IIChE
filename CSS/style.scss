@@ -1,6 +1,6 @@
 :root {
     --loadingBg: #aaaaaa;
-    --homeBg: #000000;
+    --homeBg: #121312;
 }
 
 %flex {
@@ -67,8 +67,48 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 8vh;
+    height: 10vh;
     background: #333333;
+    svg {
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        transform: rotateY(180deg);
+        path {
+            fill: #333333;
+        }
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        @extend %flex;
+        justify-content: space-between;
+        font-family: 'Poppins', sans-serif;
+        picture {
+            margin-top: 2%;
+            width: 30%;
+            @extend %flex;
+            img {
+                width: 100%;
+            }
+        }
+        ul {
+            width: 60%;
+            @extend %flex;
+            list-style-type: none;
+            justify-content: space-around;
+            li {
+                color: white;
+                font-size: clamp(1rem, 3vw, 1.5rem)
+            }
+        }
+    }
 }
 
 .home {
