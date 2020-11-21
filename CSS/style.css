@@ -1,5 +1,6 @@
 :root {
   --loadingBg: #aaaaaa;
+  --homeBg: #171717;
 }
 
 .loading {
@@ -27,6 +28,7 @@ html {
 
 body {
   width: 100%;
+  font-family: 'Nerko One', cursive;
 }
 
 .loading {
@@ -96,7 +98,13 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 10vh;
-  background: #256;
+  height: 8vh;
+  background: #333333;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: var(--homeBg);
 }
 /*# sourceMappingURL=style.css.map */
