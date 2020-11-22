@@ -1,9 +1,11 @@
 :root {
   --loadingBg: #aaaaaa;
   --homeBg: #121312;
+  --header: #333333;
+  --headerText: #ffffff;
 }
 
-.loading, header nav, header nav picture, header nav ul {
+.loading, header nav, header nav picture, header nav ul, .home, .home .home__columnTwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,7 +101,7 @@ header {
   left: 0;
   width: 100vw;
   height: 10vh;
-  background: #333333;
+  background: var(--header);
 }
 
 header svg {
@@ -113,7 +115,7 @@ header svg {
 }
 
 header svg path {
-  fill: #333333;
+  fill: var(--header);
 }
 
 header nav {
@@ -146,7 +148,8 @@ header nav ul {
 }
 
 header nav ul li {
-  color: white;
+  background-size: cover;
+  color: var(--headerText);
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
@@ -154,5 +157,36 @@ header nav ul li {
   width: 100vw;
   height: 100vh;
   background: var(--homeBg);
+}
+
+.home .home__columnOne,
+.home .home__columnTwo {
+  width: 50%;
+  height: 100%;
+}
+
+.home .home__columnTwo .home__text {
+  color: var(--headerText);
+  font-size: 10rem;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 /*# sourceMappingURL=style.css.map */
