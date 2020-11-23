@@ -5,8 +5,8 @@
   --headerText: #ffffff;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .loading, header nav, header nav picture, header nav ul, .home, .home .home__columnTwo, .aboutEvent, .aboutEvent .aboutEvent__content, .aboutIIChE, .aboutIIChE .aboutIIChE__logo,
-.aboutIIChE .aboutIIChE__content, .timeline {
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutEvent, .aboutIIChE, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .home .home__columnTwo, .aboutEvent .aboutEvent__content, .aboutIIChE .aboutIIChE__logo,
+.aboutIIChE .aboutIIChE__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,6 +28,13 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.home, .aboutEvent, .aboutIIChE, .timeline, .prizes, .sponsor, .register, .contact {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 * {
@@ -171,13 +178,6 @@ header nav ul li {
   font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
-.home {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
 .home .home__bg {
   position: fixed;
   top: 0;
@@ -260,11 +260,7 @@ header nav ul li {
 }
 
 .aboutEvent {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   background: var(--homeBg);
-  position: relative;
   -webkit-perspective: 2px;
           perspective: 2px;
 }
@@ -276,7 +272,7 @@ header nav ul li {
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.2;
   background: url(../img/mapBG.png);
   background-position: center;
   background-attachment: fixed;
@@ -321,11 +317,7 @@ header nav ul li {
 }
 
 .aboutIIChE {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: var(--homeBg);
+  background: #256;
 }
 
 .aboutIIChE .aboutIIChE__logo,
@@ -364,14 +356,46 @@ header nav ul li {
 }
 
 .timeline {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   background: #245;
 }
 
 .timeline h1 {
   font-size: 6rem;
+}
+
+.prizes {
+  background: black;
+}
+
+.prizes h1 {
+  color: white;
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+
+.sponsor {
+  background: red;
+}
+
+.sponsor h1 {
+  color: white;
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+
+.register {
+  background: yellow;
+}
+
+.register h1 {
+  color: white;
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+
+.contact {
+  background: green;
+}
+
+.contact h1 {
+  color: white;
+  font-size: clamp(4rem, 8vw, 6rem);
 }
 /*# sourceMappingURL=style.css.map */

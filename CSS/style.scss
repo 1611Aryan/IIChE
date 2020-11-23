@@ -24,6 +24,14 @@
     }
 }
 
+%section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    @extend %flex;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -134,11 +142,7 @@ header {
 
 //*Home Section
 .home {
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    @extend %flex;
+    @extend %section;
     .home__bg {
         position: fixed;
         top: 0;
@@ -191,12 +195,8 @@ header {
 
 //*About Event Section
 .aboutEvent {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    @extend %flex;
+    @extend %section;
     background: var(--homeBg);
-    position: relative;
     perspective: 2px;
     .aboutEvent__bg {
         position: absolute;
@@ -205,7 +205,7 @@ header {
         width: 100vw;
         height: 100vh;
         z-index: 1;
-        opacity: 0.5;
+        opacity: 0.2;
         background: url(../img/mapBG.png);
         background-position: center;
         background-attachment: fixed;
@@ -242,12 +242,8 @@ header {
 
 //*About IIChE Section
 .aboutIIChE {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    @extend %flex;
-    background: var(--homeBg);
+    @extend %section;
+    background: #256;
     .aboutIIChE__logo,
     .aboutIIChE__content {
         width: 50%;
@@ -279,13 +275,45 @@ header {
 }
 
 .timeline {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    @extend %section;
     background: #245;
-    @extend %flex;
     h1 {
         font-size: 6rem;
+    }
+}
+
+.prizes {
+    @extend %section;
+    background: black;
+    h1 {
+        color: white;
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+}
+
+.sponsor {
+    @extend %section;
+    background: red;
+    h1 {
+        color: white;
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+}
+
+.register {
+    @extend %section;
+    background: yellow;
+    h1 {
+        color: white;
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+}
+
+.contact {
+    @extend %section;
+    background: green;
+    h1 {
+        color: white;
+        font-size: clamp(4rem, 8vw, 6rem);
     }
 }
