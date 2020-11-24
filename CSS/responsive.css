@@ -24,12 +24,19 @@
 
 @media only screen and (max-width: 600px) {
   .parallax {
+    background-attachment: scroll !important;
     position: absolute !important;
   }
   .home .home__columnTwo .home__text {
     text-shadow: 2px 5px 15px #fbff22;
     -webkit-animation: entrance 1.5s ease-out;
             animation: entrance 1.5s ease-out;
+  }
+  .aboutEvent .plane {
+    top: 30%;
+    width: 30%;
+    -webkit-transform: rotateZ(30deg);
+            transform: rotateZ(30deg);
   }
   .aboutEvent .aboutEvent__content {
     width: 80%;
@@ -40,6 +47,18 @@
   }
   .aboutEvent .aboutEvent__content p {
     font-size: clamp(0.7rem, 5vw, 2rem);
+  }
+  @-webkit-keyframes fly {
+    to {
+      -webkit-transform: translate(500%, 500%) skewX(-15deg);
+              transform: translate(500%, 500%) skewX(-15deg);
+    }
+  }
+  @keyframes fly {
+    to {
+      -webkit-transform: translate(500%, 500%) skewX(-15deg);
+              transform: translate(500%, 500%) skewX(-15deg);
+    }
   }
   .aboutIIChE .aboutIIChE__content {
     width: 60%;

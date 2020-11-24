@@ -12,6 +12,9 @@ window.addEventListener('scroll', e => {
         logo.style.transform = `translateX(${-x}px)`;
         IIChE_Content.style.transform = `translateX(${x}px)`;
     }
+    if (pageYOffset > 1.5 * window.innerHeight) {
+        $('.plane').style.webkitAnimationPlayState = "running";
+    }
 });
 const canvasAbout = $('.aboutIIChE__canvas');
 canvasAbout.width = window.innerWidth;

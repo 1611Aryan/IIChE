@@ -279,6 +279,11 @@ header nav ul a li {
   z-index: -1;
 }
 
+.home .home__bg picture {
+  width: 110%;
+  height: 110%;
+}
+
 .home .home__columnOne,
 .home .home__columnTwo {
   width: 50%;
@@ -335,6 +340,13 @@ header nav ul a li {
 
 .aboutIIChE {
   background: #256;
+  background: #161616;
+  background: #232526;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #010101), to(#1A1B1B));
+  background: linear-gradient(to bottom, #010101 70%, #1A1B1B);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .aboutIIChE .aboutIIChE__canvas {
@@ -359,7 +371,6 @@ header nav ul a li {
 }
 
 .aboutIIChE .aboutIIChE__content {
-  width: 60%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -415,6 +426,18 @@ header nav ul a li {
   z-index: -1;
 }
 
+.aboutEvent .plane {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 15%;
+  opacity: 0.8;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  -webkit-animation: fly 5s linear forwards;
+          animation: fly 5s linear forwards;
+}
+
 .aboutEvent .aboutEvent__content {
   width: 60%;
   height: 80%;
@@ -441,6 +464,20 @@ header nav ul a li {
 .aboutEvent .aboutEvent__content p {
   font-size: 2rem;
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+@-webkit-keyframes fly {
+  to {
+    -webkit-transform: translate(700%, 500%) skewX(-15deg);
+            transform: translate(700%, 500%) skewX(-15deg);
+  }
+}
+
+@keyframes fly {
+  to {
+    -webkit-transform: translate(700%, 500%) skewX(-15deg);
+            transform: translate(700%, 500%) skewX(-15deg);
+  }
 }
 
 .timeline {

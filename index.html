@@ -120,6 +120,7 @@
             </div>
         </div>
     </section>
+
     <section class="aboutIIChE" id="about">
         <canvas class="aboutIIChE__canvas"></canvas>
         <div class="aboutIIChE__logo">
@@ -143,6 +144,16 @@
         <div class="aboutEvent__bg parallax">
 
         </div>
+        <svg class="plane" viewBox="0 0 571 439" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="plane">
+                <path id="Vector_1" d="M0 167.5L570.1 0L156 226.8L0 167.5Z" fill="white" />
+                <path id="Vector_2" d="M570.1 0L156 226.8L222.5 368.5L570.1 0Z" fill="#E0E0E0" />
+                <path id="Vector_3" d="M570.1 0L240 256.5L372.7 438.7L570.1 0Z" fill="white" />
+                <path id="Vector_4" d="M222.5 368.5L240 256.5L278.4 309.2L222.5 368.5Z" fill="#C0C0C0" />
+            </g>
+        </svg>
+
+
         <div class="aboutEvent__content">
             <h1>Event Overview</h1>
             <p>Wartrade is the perfect blend of Engineering and Business as it involves both making bombs , selling them and bidding for the raw material.<br> It's going to be a two day event teams from all over India will be participating. Only the team
@@ -178,6 +189,7 @@
             document.getElementById("loading").addEventListener("transitionend", () => {
                 document.getElementById("loading").style.display = "none";
             })
+            $('.plane').style.webkitAnimationPlayState = "paused";
         }
 
         var progress = document.getElementById('progressBar');

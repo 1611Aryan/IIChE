@@ -214,6 +214,10 @@ header {
         width: 100%;
         height: 100%;
         @extend %image;
+        picture {
+            width: 110%;
+            height: 110%;
+        }
         filter: blur(1px);
         z-index: -1;
     }
@@ -255,6 +259,12 @@ header {
 .aboutIIChE {
     @extend %section;
     background: #256;
+    background: rgb(22, 22, 22);
+    background: #232526;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #010101 70%, #1A1B1B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     .aboutIIChE__canvas {
         position: absolute;
         top: 0;
@@ -276,7 +286,6 @@ header {
         }
     }
     .aboutIIChE__content {
-        width: 60%;
         flex-direction: column;
         align-items: flex-start;
         color: white;
@@ -322,6 +331,17 @@ header {
             z-index: -1;
         }
     }
+    .plane {
+        position: absolute;
+        // bottom: 5%;
+        // left: 0;
+        top: 5%;
+        left: 0;
+        width: 15%;
+        opacity: 0.8;
+        transform: rotateZ(45deg);
+        animation: fly 5s linear forwards;
+    }
     .aboutEvent__content {
         width: 60%;
         height: 80%;
@@ -340,6 +360,12 @@ header {
             font-size: 2rem;
             font-family: 'Noto Sans JP', sans-serif;
         }
+    }
+}
+
+@keyframes fly {
+    to {
+        transform: translate(700%, 500%) skewX(-15deg);
     }
 }
 
