@@ -228,7 +228,7 @@ header {
         .home__text {
             color: var(--headerText);
             font-size: clamp(7rem, 10vw, 10rem);
-            animation: glow 1s ease-in-out infinite alternate, entrance 1.5s ease-out;
+            animation: glow 1s ease infinite alternate, entrance 1.2s ease;
         }
     }
 }
@@ -244,16 +244,12 @@ header {
 
 @keyframes entrance {
     0% {
-        transform: translateX(200%) scale(0) translateZ(0);
-    }
-    90% {
-        transform: translateX(0%) scale(1) translateZ(0);
-    }
-    95% {
-        transform: skewY(-1deg)translateZ(0);
+        transform: translate3d(200%, 0, 0);
+        font-size: 0;
     }
     100% {
-        transform: translateX(0%) skewY(0deg) translateZ(0);
+        transform: translate3d(0, 0, 0);
+        font-size: clamp(7rem, 10vw, 10rem)
     }
 }
 

@@ -289,8 +289,8 @@ header nav ul a li {
 .home .home__columnTwo .home__text {
   color: var(--headerText);
   font-size: clamp(7rem, 10vw, 10rem);
-  -webkit-animation: glow 1s ease-in-out infinite alternate, entrance 1.5s ease-out;
-          animation: glow 1s ease-in-out infinite alternate, entrance 1.5s ease-out;
+  -webkit-animation: glow 1s ease infinite alternate, entrance 1.2s ease;
+          animation: glow 1s ease infinite alternate, entrance 1.2s ease;
 }
 
 @-webkit-keyframes glow {
@@ -313,39 +313,27 @@ header nav ul a li {
 
 @-webkit-keyframes entrance {
   0% {
-    -webkit-transform: translateX(200%) scale(0) translateZ(0);
-            transform: translateX(200%) scale(0) translateZ(0);
-  }
-  90% {
-    -webkit-transform: translateX(0%) scale(1) translateZ(0);
-            transform: translateX(0%) scale(1) translateZ(0);
-  }
-  95% {
-    -webkit-transform: skewY(-1deg) translateZ(0);
-            transform: skewY(-1deg) translateZ(0);
+    -webkit-transform: translate3d(200%, 0, 0);
+            transform: translate3d(200%, 0, 0);
+    font-size: 0;
   }
   100% {
-    -webkit-transform: translateX(0%) skewY(0deg) translateZ(0);
-            transform: translateX(0%) skewY(0deg) translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    font-size: clamp(7rem, 10vw, 10rem);
   }
 }
 
 @keyframes entrance {
   0% {
-    -webkit-transform: translateX(200%) scale(0) translateZ(0);
-            transform: translateX(200%) scale(0) translateZ(0);
-  }
-  90% {
-    -webkit-transform: translateX(0%) scale(1) translateZ(0);
-            transform: translateX(0%) scale(1) translateZ(0);
-  }
-  95% {
-    -webkit-transform: skewY(-1deg) translateZ(0);
-            transform: skewY(-1deg) translateZ(0);
+    -webkit-transform: translate3d(200%, 0, 0);
+            transform: translate3d(200%, 0, 0);
+    font-size: 0;
   }
   100% {
-    -webkit-transform: translateX(0%) skewY(0deg) translateZ(0);
-            transform: translateX(0%) skewY(0deg) translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    font-size: clamp(7rem, 10vw, 10rem);
   }
 }
 
