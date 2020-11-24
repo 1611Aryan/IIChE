@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
     <div id="loading" class="loading">
         <svg viewBox="0 0 256 398" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Group 1">
@@ -83,7 +87,7 @@
     </header>
 
     <section class="home" id="home">
-        <div class="home__bg">
+        <div class="home__bg parallax">
             <picture>
                 <source srcset="img/pexels-maurício-mascaro-376533.jpg" type="image/jpeg">
                 <img src="img/pexels-maurício-mascaro-376533.jpg">
@@ -96,19 +100,8 @@
             </div>
         </div>
     </section>
-
-    <section class="aboutEvent">
-        <div class="aboutEvent__bg">
-
-        </div>
-        <div class="aboutEvent__content">
-            <h1>Event Overview</h1>
-            <p>Wartrade is the perfect blend of Engineering and Business as it involves both making bombs , selling them and bidding for the raw material.<br> It's going to be a two day event teams from all over India will be participating. Only the team
-                <br> with the perfect combination of Business brain and Engineering will win ! </p>
-        </div>
-    </section>
-
     <section class="aboutIIChE">
+        <canvas class="aboutIIChE__canvas"></canvas>
         <div class="aboutIIChE__logo">
             <picture>
                 <source srcset="img/Logo.png" type="image/png">
@@ -124,6 +117,18 @@
 
 
     </section>
+
+    <section class="aboutEvent">
+        <div class="aboutEvent__bg parallax">
+
+        </div>
+        <div class="aboutEvent__content">
+            <h1>Event Overview</h1>
+            <p>Wartrade is the perfect blend of Engineering and Business as it involves both making bombs , selling them and bidding for the raw material.<br> It's going to be a two day event teams from all over India will be participating. Only the team
+                <br> with the perfect combination of Business brain and Engineering will win ! </p>
+        </div>
+    </section>
+
 
     <section class="timeline">
         <h1>Timeline</h1>
@@ -152,6 +157,14 @@
             document.getElementById("loading").addEventListener("transitionend", () => {
                 document.getElementById("loading").style.display = "none";
             })
+        }
+
+        var progress = document.getElementById('progressBar');
+        progress.style.height = 0 + "%";
+        var totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function() {
+            var progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
         }
     </script>
 </body>

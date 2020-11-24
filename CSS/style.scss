@@ -50,6 +50,67 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1vw;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.0);
+    z-index: 999;
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1vw;
+    height: 100%;
+    background: linear-gradient(to top, #00B71266, #5AFF1566, #88DA6166);
+    animation: scroll 3s linear;
+    animation-iteration-count: infinite;
+    z-index: 999;
+}
+
+#progressBar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00B71266, #5AFF1566, #88DA6166);
+    filter: blur(20px);
+}
+
+#progressBar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00B71266, #5AFF1566, #88DA6166);
+    filter: blur(50px);
+}
+
+@keyframes scroll {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
 .loading {
     z-index: 9999999;
     position: absolute;
@@ -206,7 +267,7 @@ header {
         height: 100vh;
         z-index: 1;
         opacity: 0.2;
-        background: url(../img/mapBG.png);
+        background: url(../img/pexels-fotografierende-1128329.jpg);
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
@@ -244,6 +305,11 @@ header {
 .aboutIIChE {
     @extend %section;
     background: #256;
+    .aboutIIChE__canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     .aboutIIChE__logo,
     .aboutIIChE__content {
         width: 50%;

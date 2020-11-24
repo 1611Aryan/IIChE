@@ -17,9 +17,15 @@
   .home .home__text {
     text-align: center;
   }
+  #progressBar {
+    width: 1.1vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .parallax {
+    position: absolute !important;
+  }
   .aboutEvent .aboutEvent__content {
     width: 80%;
     height: 80%;
