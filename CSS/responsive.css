@@ -41,6 +41,9 @@
   .aboutEvent .aboutEvent__content p {
     font-size: clamp(0.7rem, 5vw, 2rem);
   }
+  .aboutIIChE .aboutIIChE__content {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -49,9 +52,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .aboutEvent .aboutEvent__content h1 {
     margin-bottom: 1rem;

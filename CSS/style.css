@@ -5,8 +5,8 @@
   --headerText: #ffffff;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutEvent, .aboutIIChE, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .home .home__columnTwo, .aboutEvent .aboutEvent__content, .aboutIIChE .aboutIIChE__logo,
-.aboutIIChE .aboutIIChE__content {
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
+.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +30,7 @@
      object-fit: cover;
 }
 
-.home, .aboutEvent, .aboutIIChE, .timeline, .prizes, .sponsor, .register, .contact {
+.home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -333,6 +333,55 @@ header nav ul a li {
   }
 }
 
+.aboutIIChE {
+  background: #256;
+}
+
+.aboutIIChE .aboutIIChE__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.aboutIIChE .aboutIIChE__logo,
+.aboutIIChE .aboutIIChE__content {
+  width: 50%;
+  height: 100%;
+}
+
+.aboutIIChE .aboutIIChE__logo picture {
+  width: 60%;
+}
+
+.aboutIIChE .aboutIIChE__logo picture img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.aboutIIChE .aboutIIChE__content {
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: white;
+}
+
+.aboutIIChE .aboutIIChE__content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 600;
+}
+
+.aboutIIChE .aboutIIChE__content p {
+  width: 85%;
+  font-size: clamp(0.8rem, 3vw, 2rem);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .aboutEvent {
   background: var(--homeBg);
   -webkit-perspective: 2px;
@@ -376,63 +425,22 @@ header nav ul a li {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
   z-index: 2;
 }
 
 .aboutEvent .aboutEvent__content h1 {
   font-size: 4rem;
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 600;
 }
 
 .aboutEvent .aboutEvent__content p {
   font-size: 2rem;
-}
-
-.aboutIIChE {
-  background: #256;
-}
-
-.aboutIIChE .aboutIIChE__canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.aboutIIChE .aboutIIChE__logo,
-.aboutIIChE .aboutIIChE__content {
-  width: 50%;
-  height: 100%;
-}
-
-.aboutIIChE .aboutIIChE__logo picture {
-  width: 60%;
-}
-
-.aboutIIChE .aboutIIChE__logo picture img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.aboutIIChE .aboutIIChE__content {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  color: white;
-}
-
-.aboutIIChE .aboutIIChE__content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-}
-
-.aboutIIChE .aboutIIChE__content p {
-  width: 80%;
-  font-size: clamp(0.8rem, 3vw, 2rem);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .timeline {
