@@ -476,8 +476,8 @@ header nav ul a li {
 
 .timeline {
   height: 200vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #010101), to(#191C1D));
-  background: linear-gradient(to bottom, #010101 50%, #191C1D);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #121314), to(#191C1D));
+  background: linear-gradient(to bottom, #121314 50%, #191C1D);
 }
 
 .timeline h1 {
