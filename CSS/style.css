@@ -288,7 +288,7 @@ header nav ul a li {
 
 .home .home__columnTwo .home__text {
   color: var(--headerText);
-  font-size: clamp(7rem, 10vw, 10rem);
+  font-size: clamp(6rem, 10vw, 10rem);
   -webkit-animation: glow 1s ease infinite alternate, entrance 1.2s ease;
           animation: glow 1s ease infinite alternate, entrance 1.2s ease;
 }
@@ -313,27 +313,23 @@ header nav ul a li {
 
 @-webkit-keyframes entrance {
   0% {
-    -webkit-transform: translate3d(200%, 0, 0);
-            transform: translate3d(200%, 0, 0);
-    font-size: 0;
+    -webkit-transform: translate3d(200%, 0, 0) scale(0);
+            transform: translate3d(200%, 0, 0) scale(0);
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    font-size: clamp(7rem, 10vw, 10rem);
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
 @keyframes entrance {
   0% {
-    -webkit-transform: translate3d(200%, 0, 0);
-            transform: translate3d(200%, 0, 0);
-    font-size: 0;
+    -webkit-transform: translate3d(200%, 0, 0) scale(0);
+            transform: translate3d(200%, 0, 0) scale(0);
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    font-size: clamp(7rem, 10vw, 10rem);
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
   }
 }
 

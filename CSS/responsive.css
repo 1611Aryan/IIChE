@@ -27,7 +27,7 @@
     position: absolute !important;
   }
   .home .home__columnTwo .home__text {
-    text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+    text-shadow: 2px 5px 15px #fbff22;
     -webkit-animation: entrance 1.5s ease-out;
             animation: entrance 1.5s ease-out;
   }

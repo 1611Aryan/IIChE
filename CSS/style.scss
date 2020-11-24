@@ -227,7 +227,7 @@ header {
         @extend %flex;
         .home__text {
             color: var(--headerText);
-            font-size: clamp(7rem, 10vw, 10rem);
+            font-size: clamp(6rem, 10vw, 10rem);
             animation: glow 1s ease infinite alternate, entrance 1.2s ease;
         }
     }
@@ -244,12 +244,10 @@ header {
 
 @keyframes entrance {
     0% {
-        transform: translate3d(200%, 0, 0);
-        font-size: 0;
+        transform: translate3d(200%, 0, 0) scale(0);
     }
     100% {
-        transform: translate3d(0, 0, 0);
-        font-size: clamp(7rem, 10vw, 10rem)
+        transform: translate3d(0, 0, 0) scale(1);
     }
 }
 
