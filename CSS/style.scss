@@ -366,7 +366,7 @@ header {
 .timeline {
     @extend %section;
     height: 200vh;
-    background: linear-gradient(to top, #010101 50%, #191C1D);
+    background: linear-gradient(to bottom, #010101 50%, #191C1D);
     h1 {
         font-size: 6rem;
         color: white;
