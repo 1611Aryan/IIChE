@@ -33,6 +33,14 @@
         // background-attachment: scroll !important;
         position: absolute !important;
     }
+    .home {
+        .home__columnTwo {
+            .home__text {
+                text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+                animation: entrance 1.5s ease-out;
+            }
+        }
+    }
     .aboutEvent {
         .aboutEvent__content {
             width: 80%;
