@@ -258,7 +258,11 @@ header nav ul {
       justify-content: space-around;
 }
 
-header nav ul li {
+header nav ul a {
+  text-decoration: none;
+}
+
+header nav ul a li {
   background-size: cover;
   color: var(--headerText);
   font-size: clamp(0.5rem, 3vw, 1.5rem);

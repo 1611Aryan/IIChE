@@ -192,10 +192,13 @@ header {
             @extend %flex;
             list-style-type: none;
             justify-content: space-around;
-            li {
-                background-size: cover;
-                color: var(--headerText);
-                font-size: clamp(0.5rem, 3vw, 1.5rem);
+            a {
+                text-decoration: none;
+                li {
+                    background-size: cover;
+                    color: var(--headerText);
+                    font-size: clamp(0.5rem, 3vw, 1.5rem);
+                }
             }
         }
     }
