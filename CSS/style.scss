@@ -258,13 +258,7 @@ header {
 //*About IIChE Section
 .aboutIIChE {
     @extend %section;
-    background: #256;
-    background: rgb(22, 22, 22);
-    background: #232526;
-    /* fallback for old browsers */
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #010101 70%, #1A1B1B);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #010101 70%, #191C1D);
     .aboutIIChE__canvas {
         position: absolute;
         top: 0;
@@ -371,17 +365,19 @@ header {
 
 .timeline {
     @extend %section;
-    background: #245;
+    height: 200vh;
+    background: linear-gradient(to top, #010101 50%, #191C1D);
     h1 {
         font-size: 6rem;
+        color: white;
     }
 }
 
 .prizes {
     @extend %section;
-    background: black;
+    background: white;
     h1 {
-        color: white;
+        color: black;
         font-size: clamp(4rem, 8vw, 6rem);
     }
 }

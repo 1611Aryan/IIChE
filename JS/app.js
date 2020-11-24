@@ -8,7 +8,6 @@ window.addEventListener('scroll', e => {
     homeText.style.transform = `translateX(${pageYOffset / 2}px)`;
     if (pageYOffset < 1 * window.innerHeight) {
         let x = Math.abs(pageYOffset - window.innerHeight);
-        console.log(x);
         logo.style.transform = `translateX(${-x}px)`;
         IIChE_Content.style.transform = `translateX(${x}px)`;
     }
