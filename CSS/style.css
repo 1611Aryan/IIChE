@@ -5,7 +5,8 @@
   --headerText: #ffffff;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .home .home__columnOne,
+.home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
 .aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,25 +295,43 @@ header nav ul a li {
 .home .home__columnTwo .home__text {
   color: var(--headerText);
   font-size: clamp(6rem, 10vw, 10rem);
-  -webkit-animation: glow 1s ease infinite alternate, entrance 1.2s ease;
-          animation: glow 1s ease infinite alternate, entrance 1.2s ease;
+  -webkit-animation: glow2 2s linear infinite alternate, entrance 1.2s ease;
+          animation: glow2 2s linear infinite alternate, entrance 1.2s ease;
 }
 
-@-webkit-keyframes glow {
+.home .home__columnOne .wtLogo {
+  width: 25%;
+  margin-top: 10%;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+          filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+}
+
+.home .home__columnOne .wtLogo::hover {
+  -webkit-transform: rotateY(180deg) !important;
+          transform: rotateY(180deg) !important;
+}
+
+@-webkit-keyframes glow2 {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
+    -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+            filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+    -webkit-filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 4.5px #fff) drop-shadow(0 0 5px #dcdf2b) drop-shadow(0 0 5.5px #dcdf2b) drop-shadow(0 0 6px #dcdf2b) drop-shadow(0 0 6.5px #dcdf2b);
+            filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 4.5px #fff) drop-shadow(0 0 5px #dcdf2b) drop-shadow(0 0 5.5px #dcdf2b) drop-shadow(0 0 6px #dcdf2b) drop-shadow(0 0 6.5px #dcdf2b);
   }
 }
 
-@keyframes glow {
+@keyframes glow2 {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
+    -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+            filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+    -webkit-filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 4.5px #fff) drop-shadow(0 0 5px #dcdf2b) drop-shadow(0 0 5.5px #dcdf2b) drop-shadow(0 0 6px #dcdf2b) drop-shadow(0 0 6.5px #dcdf2b);
+            filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 4.5px #fff) drop-shadow(0 0 5px #dcdf2b) drop-shadow(0 0 5.5px #dcdf2b) drop-shadow(0 0 6px #dcdf2b) drop-shadow(0 0 6.5px #dcdf2b);
   }
 }
 

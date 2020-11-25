@@ -27,10 +27,25 @@
     background-attachment: scroll !important;
     position: absolute !important;
   }
-  .home .home__columnTwo .home__text {
-    text-shadow: 2px 5px 15px #fbff22;
-    -webkit-animation: entrance 1.5s ease-out;
-            animation: entrance 1.5s ease-out;
+  @-webkit-keyframes glow2 {
+    from {
+      -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+              filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+    }
+    to {
+      -webkit-filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
+              filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
+    }
+  }
+  @keyframes glow2 {
+    from {
+      -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+              filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+    }
+    to {
+      -webkit-filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
+              filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
+    }
   }
   .aboutEvent .plane {
     top: 30%;

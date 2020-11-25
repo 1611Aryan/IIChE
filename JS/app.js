@@ -2,10 +2,12 @@ const $ = (element) => {
     return document.querySelector(element);
 };
 const homeText = $(".home__text");
+const warTradeLogo = $('.wtLogo');
 const logo = $('.aboutIIChE__logo');
 const IIChE_Content = $('.aboutIIChE__content');
 window.addEventListener('scroll', e => {
     homeText.style.transform = `translateX(${pageYOffset / 2}px)`;
+    warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
     if (pageYOffset < 1 * window.innerHeight) {
         let x = Math.abs(pageYOffset - window.innerHeight);
         logo.style.transform = `translateX(${-x}px)`;
