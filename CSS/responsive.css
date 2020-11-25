@@ -11,12 +11,6 @@
   header nav ul {
     width: 70% !important;
   }
-  .home .home__columnOne {
-    display: none;
-  }
-  .home .home__text {
-    text-align: center;
-  }
   #progressBar {
     width: 1.1vw;
   }
@@ -26,6 +20,18 @@
   .parallax {
     background-attachment: scroll !important;
     position: absolute !important;
+  }
+  .home .home__columnOne .wtLogo {
+    margin-top: 0;
+    width: 100%;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+  }
+  .home .home__columnOne .wtLogo #warTradeText {
+    display: block;
+  }
+  .home .home__columnTwo {
+    display: none;
   }
   @-webkit-keyframes glow2 {
     from {

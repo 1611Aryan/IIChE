@@ -15,14 +15,7 @@
             }
         }
     }
-    .home {
-        .home__columnOne {
-            display: none;
-        }
-        .home__text {
-            text-align: center;
-        }
-    }
+    .home {}
     #progressBar {
         width: 1.1vw;
     }
@@ -34,14 +27,25 @@
         position: absolute !important;
     }
     .home {
+        .home__columnOne {
+            .wtLogo {
+                margin-top: 0;
+                width: 100%;
+                transform: scaleX(1.2);
+                #warTradeText {
+                    display: block;
+                }
+            }
+        }
         .home__columnTwo {
-            @keyframes glow2 {
-                from {
-                    filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
-                }
-                to {
-                    filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
-                }
+            display: none;
+        }
+        @keyframes glow2 {
+            from {
+                filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+            }
+            to {
+                filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
             }
         }
     }

@@ -55,6 +55,7 @@ body {
   height: 100%;
   font-family: 'Nerko One', cursive;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -300,17 +301,14 @@ header nav ul a li {
 }
 
 .home .home__columnOne .wtLogo {
-  width: 25%;
-  margin-top: 10%;
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
+  width: 35%;
+  margin-top: 15%;
   -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
           filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
 }
 
-.home .home__columnOne .wtLogo::hover {
-  -webkit-transform: rotateY(180deg) !important;
-          transform: rotateY(180deg) !important;
+.home .home__columnOne .wtLogo #warTradeText {
+  display: none;
 }
 
 @-webkit-keyframes glow2 {
