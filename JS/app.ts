@@ -4,20 +4,32 @@ const $ = (element) => {
 
 const homeText = $(".home__text");
 const warTradeLogo = $('.wtLogo');
+const warTradeLogoText = $('#warTradeText');
 const logo = $('.aboutIIChE__logo');
 const IIChE_Content = $('.aboutIIChE__content')
 
 window.addEventListener('scroll', e => {
     homeText.style.transform = `translateX(${pageYOffset / 2}px)`
         ;
-    warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset}px )`
+    warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
+    if (warTradeLogoText) {
+        warTradeLogoText.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
+    }
     if (pageYOffset < 1 * window.innerHeight) {
+        IIChE_Content.style.transition = "none";
+        logo.style.transition = "none";
         let x = Math.abs(pageYOffset - window.innerHeight);
         logo.style.transform = `translateX(${-x}px)`
         IIChE_Content.style.transform = `translateX(${x}px)`
     }
     if (pageYOffset > 1.5 * window.innerHeight) {
         $('.plane').style.webkitAnimationPlayState = "running";
+    }
+    if (pageYOffset > 2 * window.innerHeight) {
+        logo.style.transform = `translateX(0px)`;
+        logo.style.transition = " translateX 0.3s";
+        IIChE_Content.style.transform = `translateX(0px)`;
+        IIChE_Content.style.transition = " translateX 0.3s";
     }
 })
 
@@ -101,13 +113,14 @@ for (let i = 0; i < 10; i++) {
     const circle = new Circle(x, y, radius, color, speedFactor);
     circles.push(circle);
 }
-const numOfCircles = circles.length;
+
 function animate() {
     requestAnimationFrame(animate);
     aboutC.clearRect(0, 0, canvasAbout.width, canvasAbout.height);
-    for (let i = 0; i < numOfCircles; i++) {
-        circles[i].move();
-    }
+    circles.forEach(circle => {
+        circle.move();
+    })
+
 }
 
 animate();

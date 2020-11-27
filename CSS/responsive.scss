@@ -15,7 +15,6 @@
             }
         }
     }
-    .home {}
     #progressBar {
         width: 1.1vw;
     }
@@ -28,13 +27,20 @@
     }
     .home {
         .home__columnOne {
+            width: 80%;
             .wtLogo {
                 margin-top: 0;
-                width: 100%;
+                width: 50%;
                 transform: scaleX(1.2);
-                #warTradeText {
-                    display: block;
+                filter: none;
+                path {
+                    fill: white;
                 }
+            }
+            #warTradeText {
+                font-size: 3rem;
+                color: white;
+                display: block;
             }
         }
         .home__columnTwo {
@@ -50,6 +56,7 @@
         }
     }
     .aboutEvent {
+        perspective: 0px;
         .plane {
             top: 30%;
             width: 30%;
@@ -79,11 +86,17 @@
 }
 
 @media only screen and (max-width:400px) {
+    .menu {
+        width: 50px;
+        height: 50px;
+        i {
+            font-size: 180%;
+        }
+    }
     .aboutEvent {
         .aboutEvent__content {
             width: 90%;
             justify-content: center;
-            //align-items: center;
             h1 {
                 margin-bottom: 1rem;
             }

@@ -21,13 +21,23 @@
     background-attachment: scroll !important;
     position: absolute !important;
   }
+  .home .home__columnOne {
+    width: 80%;
+  }
   .home .home__columnOne .wtLogo {
     margin-top: 0;
-    width: 100%;
+    width: 50%;
     -webkit-transform: scaleX(1.2);
             transform: scaleX(1.2);
+    -webkit-filter: none;
+            filter: none;
   }
-  .home .home__columnOne .wtLogo #warTradeText {
+  .home .home__columnOne .wtLogo path {
+    fill: white;
+  }
+  .home .home__columnOne #warTradeText {
+    font-size: 3rem;
+    color: white;
     display: block;
   }
   .home .home__columnTwo {
@@ -52,6 +62,10 @@
       -webkit-filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
               filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #dcdf2b) drop-shadow(0 0 3.5px #dcdf2b) drop-shadow(0 0 4px #dcdf2b) drop-shadow(0 0 4.5px #dcdf2b);
     }
+  }
+  .aboutEvent {
+    -webkit-perspective: 0px;
+            perspective: 0px;
   }
   .aboutEvent .plane {
     top: 30%;
@@ -87,6 +101,13 @@
 }
 
 @media only screen and (max-width: 400px) {
+  .menu {
+    width: 50px;
+    height: 50px;
+  }
+  .menu i {
+    font-size: 180%;
+  }
   .aboutEvent .aboutEvent__content {
     width: 90%;
     -webkit-box-pack: center;

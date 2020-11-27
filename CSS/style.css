@@ -5,7 +5,7 @@
   --headerText: #ffffff;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .home .home__columnOne,
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .menu, .home .home__columnOne,
 .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
 .aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content {
   display: -webkit-box;
@@ -270,6 +270,25 @@ header nav ul a li {
   font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
+.menu {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.menu i {
+  font-size: 200%;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 .home .home__bg {
   position: fixed;
   top: 0;
@@ -281,7 +300,7 @@ header nav ul a li {
   z-index: -1;
 }
 
-.home .home__bg picture {
+.home .home__bg picture img {
   width: 110%;
   height: 110%;
 }
@@ -296,19 +315,46 @@ header nav ul a li {
 .home .home__columnTwo .home__text {
   color: var(--headerText);
   font-size: clamp(6rem, 10vw, 10rem);
-  -webkit-animation: glow2 2s linear infinite alternate, entrance 1.2s ease;
-          animation: glow2 2s linear infinite alternate, entrance 1.2s ease;
+  -webkit-animation: glow 2s linear infinite alternate, entrance 1.2s ease;
+          animation: glow 2s linear infinite alternate, entrance 1.2s ease;
+}
+
+.home .home__columnOne {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .home .home__columnOne .wtLogo {
   width: 35%;
   margin-top: 15%;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
   -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
           filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
 }
 
-.home .home__columnOne .wtLogo #warTradeText {
+.home .home__columnOne #warTradeText {
   display: none;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+  }
 }
 
 @-webkit-keyframes glow2 {

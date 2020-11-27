@@ -205,6 +205,25 @@ header {
     }
 }
 
+//*Nav Menu
+.menu {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    @extend %flex;
+    i {
+        font-size: 200%;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+}
+
 //*Home Section
 .home {
     @extend %section;
@@ -216,8 +235,10 @@ header {
         height: 100%;
         @extend %image;
         picture {
-            width: 110%;
-            height: 110%;
+            img {
+                width: 110%;
+                height: 110%;
+            }
         }
         filter: blur(1px);
         z-index: -1;
@@ -233,29 +254,32 @@ header {
         .home__text {
             color: var(--headerText);
             font-size: clamp(6rem, 10vw, 10rem);
-            animation: glow2 2s linear infinite alternate, entrance 1.2s ease;
+            animation: glow 2s linear infinite alternate, entrance 1.2s ease;
         }
     }
     .home__columnOne {
+        flex-direction: column;
         .wtLogo {
             width: 35%;
             margin-top: 15%;
+            transform: scaleX(1.2);
             filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
-            #warTradeText {
-                display: none;
-            }
+        }
+        #warTradeText {
+            display: none;
         }
     }
 }
 
-// @keyframes glow {
-//     from {
-//         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
-//     }
-//     to {
-//         text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
-//     }
-// }
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
+    }
+}
+
 @keyframes glow2 {
     from {
         filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
