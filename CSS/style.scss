@@ -3,6 +3,8 @@
     --homeBg: #121312;
     --header: #333333;
     --headerText: #ffffff;
+    --fontHeading: 'ABeeZee', sans-serif;
+    --fontParagraph: 'Noto Sans JP', sans-serif;
 }
 
 %flex {
@@ -380,7 +382,7 @@ header {
         animation: fly 5s linear forwards;
     }
     .aboutEvent__content {
-        width: 60%;
+        width: 80%;
         height: 80%;
         @extend %flex;
         flex-direction: column;
@@ -389,13 +391,21 @@ header {
         color: white;
         z-index: 2;
         h1 {
-            font-size: 4rem;
-            font-family: 'ABeeZee', sans-serif;
+            font-size: clamp(1.7rem, 5vw, 3.75rem);
+            font-family: var(--fontHeading);
             font-weight: 600;
         }
         p {
-            font-size: 2rem;
-            font-family: 'Noto Sans JP', sans-serif;
+            font-size: clamp(0.7rem, 3vw, 1.8rem);
+            font-family: var(--fontParagraph);
+            span {
+                color: rgb(145, 227, 255);
+                //color: rgb(255, 255, 144);
+                transition: color 300ms;
+                &:hover {
+                    color: rgb(182, 237, 255)
+                }
+            }
         }
     }
 }
@@ -419,9 +429,17 @@ header {
 .prizes {
     @extend %section;
     background: white;
-    h1 {
-        color: black;
-        font-size: clamp(4rem, 8vw, 6rem);
+    .prizes__content {
+        width: 60%;
+        h1 {
+            color: black;
+            font-size: clamp(2rem, 5vw, 3.75rem);
+            font-family: var(--fontHeading);
+        }
+        p {
+            color: black;
+            font-family: var(--fontParagraph);
+        }
     }
 }
 
@@ -445,9 +463,79 @@ header {
 
 .contact {
     @extend %section;
-    background: green;
-    h1 {
-        color: white;
-        font-size: clamp(4rem, 8vw, 6rem);
+    .contact__content {
+        width: 100%;
+        @extend %flex;
+        justify-content: space-around;
+        .contact__columnOne {
+            width: 40%;
+            h1 {
+                font-family: var(--fontHeading);
+                color: white;
+                font-size: clamp(2rem, 7vw, 4.75rem);
+            }
+            p {
+                font-family: var(--fontParagraph);
+                font-weight: 400;
+                font-size: clamp(0.7rem, 3vw, 1.5rem);
+                color: white;
+            }
+        }
+        .contact__columnTwo {
+            @extend %flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 40%;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            i {
+                color: white;
+                font-size: clamp(1rem, 3vw, 2.75rem);
+            }
+            .phone {
+                @extend %flex;
+                span {
+                    color: white;
+                    font-size: clamp(0.5rem, 5vw, 1.7rem);
+                    ;
+                    margin-left: 0.5rem;
+                    font-family: var(--fontParagraph);
+                }
+            }
+            .insta {
+                @extend %flex;
+                span {
+                    color: white;
+                    font-size: clamp(0.5rem, 5vw, 1.7rem);
+                    ;
+                    margin-left: 0.5rem;
+                    font-family: var(--fontParagraph);
+                }
+            }
+        }
+    }
+    background: #222;
+    .waves {
+        width: 300%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        .backWave {
+            animation: traverse 15s infinite linear alternate;
+        }
+        .midWave {
+            animation: traverse 15.5s infinite linear alternate;
+        }
+        .topWave {
+            animation: traverse 16s infinite linear alternate;
+        }
+    }
+}
+
+@keyframes traverse {
+    to {
+        transform: translateX(62.5%);
     }
 }

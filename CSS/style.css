@@ -3,11 +3,13 @@
   --homeBg: #121312;
   --header: #333333;
   --headerText: #ffffff;
+  --fontHeading: 'ABeeZee', sans-serif;
+  --fontParagraph: 'Noto Sans JP', sans-serif;
 }
 
 .home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .menu, .home .home__columnOne,
 .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
-.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content {
+.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content, .contact .contact__content, .contact .contact__content .contact__columnTwo, .contact .contact__content .contact__columnTwo .phone, .contact .contact__content .contact__columnTwo .insta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,7 +498,7 @@ header nav ul a li {
 }
 
 .aboutEvent .aboutEvent__content {
-  width: 60%;
+  width: 80%;
   height: 80%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -513,14 +515,24 @@ header nav ul a li {
 }
 
 .aboutEvent .aboutEvent__content h1 {
-  font-size: 4rem;
-  font-family: 'ABeeZee', sans-serif;
+  font-size: clamp(1.7rem, 5vw, 3.75rem);
+  font-family: var(--fontHeading);
   font-weight: 600;
 }
 
 .aboutEvent .aboutEvent__content p {
-  font-size: 2rem;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(0.7rem, 3vw, 1.8rem);
+  font-family: var(--fontParagraph);
+}
+
+.aboutEvent .aboutEvent__content p span {
+  color: #91e3ff;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.aboutEvent .aboutEvent__content p span:hover {
+  color: #b6edff;
 }
 
 @-webkit-keyframes fly {
@@ -552,9 +564,19 @@ header nav ul a li {
   background: white;
 }
 
-.prizes h1 {
+.prizes .prizes__content {
+  width: 60%;
+}
+
+.prizes .prizes__content h1 {
   color: black;
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-family: var(--fontHeading);
+}
+
+.prizes .prizes__content p {
+  color: black;
+  font-family: var(--fontParagraph);
 }
 
 .sponsor {
@@ -576,11 +598,100 @@ header nav ul a li {
 }
 
 .contact {
-  background: green;
+  background: #222;
 }
 
-.contact h1 {
+.contact .contact__content {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact .contact__content .contact__columnOne {
+  width: 40%;
+}
+
+.contact .contact__content .contact__columnOne h1 {
+  font-family: var(--fontHeading);
   color: white;
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(2rem, 7vw, 4.75rem);
+}
+
+.contact .contact__content .contact__columnOne p {
+  font-family: var(--fontParagraph);
+  font-weight: 400;
+  font-size: clamp(0.7rem, 3vw, 1.5rem);
+  color: white;
+}
+
+.contact .contact__content .contact__columnTwo {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.contact .contact__content .contact__columnTwo a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact .contact__content .contact__columnTwo i {
+  color: white;
+  font-size: clamp(1rem, 3vw, 2.75rem);
+}
+
+.contact .contact__content .contact__columnTwo .phone span {
+  color: white;
+  font-size: clamp(0.5rem, 5vw, 1.7rem);
+  margin-left: 0.5rem;
+  font-family: var(--fontParagraph);
+}
+
+.contact .contact__content .contact__columnTwo .insta span {
+  color: white;
+  font-size: clamp(0.5rem, 5vw, 1.7rem);
+  margin-left: 0.5rem;
+  font-family: var(--fontParagraph);
+}
+
+.contact .waves {
+  width: 300%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.contact .waves .backWave {
+  -webkit-animation: traverse 15s infinite linear alternate;
+          animation: traverse 15s infinite linear alternate;
+}
+
+.contact .waves .midWave {
+  -webkit-animation: traverse 15.5s infinite linear alternate;
+          animation: traverse 15.5s infinite linear alternate;
+}
+
+.contact .waves .topWave {
+  -webkit-animation: traverse 16s infinite linear alternate;
+          animation: traverse 16s infinite linear alternate;
+}
+
+@-webkit-keyframes traverse {
+  to {
+    -webkit-transform: translateX(62.5%);
+            transform: translateX(62.5%);
+  }
+}
+
+@keyframes traverse {
+  to {
+    -webkit-transform: translateX(62.5%);
+            transform: translateX(62.5%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

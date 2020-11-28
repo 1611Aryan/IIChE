@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/responsive.css">
     <script src="https://kit.fontawesome.com/ea6e17d3b1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -72,9 +72,9 @@
         </svg>
         <nav>
             <picture>
-                <source srcset="img/logoWhite.webp" type="image/webp">
-                <source srcset="img/logoWhite.png" type="image/png">
-                <img src="img/logoWhite.png">
+                <source srcset="./img/logoWhite.webp" type="image/webp">
+                <source srcset="./img/logoWhite.png" type="image/png">
+                <img src="./img/logoWhite.png">
             </picture>
             <ul>
                 <a href="#about">
@@ -114,9 +114,9 @@
     <section class="home" id="home">
         <div class="home__bg parallax">
             <picture>
-                <source srcset="img/pexels-maurício-mascaro-376533.webp" type="image/webp">
-                <source srcset="img/pexels-maurício-mascaro-376533.jpg" type="image/jpg">
-                <img src="img/pexels-maurício-mascaro-376533.jpg">
+                <source srcset="img/home.webp" type="image/webp">
+                <source srcset="img/home.jpg" type="image/jpg">
+                <img src="img/home.jpg">
             </picture>
         </div>
         <div class="home__columnOne">
@@ -160,8 +160,8 @@
         <div class="aboutIIChE__logo">
             <picture>
                 <source srcset="img/Logo.webp" type="image/webp">
-                <source loading="lazy" srcset="img/Logo.png" type="image/png">
-                <img src="img/Logo.png">
+                <source srcset="img/Logo.png" type="image/png">
+                <img loading="lazy" src="img/Logo.png">
             </picture>
         </div>
         <div class="aboutIIChE__content">
@@ -186,22 +186,33 @@
                 <path id="Vector_4" d="M222.5 368.5L240 256.5L278.4 309.2L222.5 368.5Z" fill="#C0C0C0" />
             </g>
         </svg>
-
-
         <div class="aboutEvent__content">
             <h1>Event Overview</h1>
-            <p>Wartrade is the perfect blend of Engineering and Business as it involves both making bombs , selling them and bidding for the raw material.<br> It's going to be a two day event teams from all over India will be participating. Only the team
-                <br> with the perfect combination of Business brain and Engineering will win ! </p>
+            <br>
+            <p>WarTrade is a three day mega event where players get to re-enact a <span class="aboutEvent__content-emphasise">battlefield</span> on a virtual stage by both creating their own <span class="aboutEvent__content-emphasise">bombs</span> as well
+                as negotiating its components. WarTrade offers the best platform for all the <span class="aboutEvent__content-emphasise">engineering buffs</span> and <span class="aboutEvent__content-emphasise">businessheads</span> to showcase their
+                <span class="aboutEvent__content-emphasise">Technical Knowledge
+                </span> and <span class="aboutEvent__content-emphasise">Persuasion Skills</span> on a global scale.
+                <br> During the event, participants will be collaborating in teams of representative <span class="aboutEvent__content-emphasise">countries</span> with a preassigned monetary <span class="aboutEvent__content-emphasise">budget.</span> They’ll
+                be battling it out with other teams by boasting their <span class="aboutEvent__content-emphasise">superior firepower</span> in terms of bombs and negotiation skills. Players will have to compete in a sudden verbal cross-fire and haggle
+                in a intense <span class="aboutEvent__content-emphasise">tradewar</span> with other countries as sudden crisis strikes and <span class="aboutEvent__content-emphasise">political powerplay</span> comes into play.
+                <br> WarTrade has plenty to motivate , encourage and enjoy in a competitive inter-team interaction and is bound to BLOW everyones minds.
+            </p>
         </div>
     </section>
-
 
     <section class="timeline" id="timeline">
         <h1>Timeline</h1>
     </section>
 
     <section class="prizes" id="prizes">
-        <h1>Prizes</h1>
+
+        <div class="prizes__content">
+            <h1>Prizes</h1>
+            <p>THE CROWN WINNER OF WARTRADE WILL RECEIVE EXCLUSIVE PRIZES WORTHY OF A KING ALONG WITH ETERNAL GLORY OF BEING A CHAMPION. And not forgetting about all the participating teams who’ll also receive attractive consolation prizes and goodies as
+                well.
+            </p>
+        </div>
     </section>
 
     <section class="sponsor" id="sponsor">
@@ -213,10 +224,59 @@
     </section>
 
     <section class="contact" id="contact">
-        <h1>Get In Touch</h1>
+        <div class="contact__content">
+            <div class="contact__columnOne">
+                <h1>Contact Us
+                </h1>
+                <p>
+                    While we are good at SMOKE SIGNALS, there are many simpler ways to get in touch with you and answer your queries. Feel free to say hello!!
+                </p>
+            </div>
+            <div class="contact__columnTwo">
+                <div class="phone"><i class="fas fa-phone"></i><span>7986810284</span></div>
+
+                <br>
+                <div class="insta">
+                    <a href="https://www.instagram.com/iiche.tiet/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>@iiche.tiet</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <svg class="waves" viewBox="0 0 5320 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="waves">
+                <g class="backWave">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2660 98.7L2770.83 119.262C2881.67 139.825 3103.33 180.95 3325 180.95C3546.67 180.95 3768.33 139.825 3990 119.262C4211.67 98.7 4433.33 98.7 4655 82.25C4876.67 65.8 5098.33 32.9 5209.17 16.45L5320 0V246.75H5209.17C5098.33 246.75 4876.67 246.75 4655 246.75C4433.33 246.75 4211.67 246.75 3990 246.75C3768.33 246.75 3546.67 246.75 3325 246.75C3103.33 246.75 2881.67 246.75 2770.83 246.75H2660V98.7Z"
+                        fill="#FF7A7A" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2660 98.7L2549.17 119.262C2438.33 139.825 2216.67 180.95 1995 180.95C1773.33 180.95 1551.67 139.825 1330 119.262C1108.33 98.7 886.667 98.7 665 82.25C443.333 65.8 221.667 32.9 110.833 16.45L-6.10352e-05 0V246.75H110.833C221.667 246.75 443.333 246.75 665 246.75C886.667 246.75 1108.33 246.75 1330 246.75C1551.67 246.75 1773.33 246.75 1995 246.75C2216.67 246.75 2438.33 246.75 2549.17 246.75H2660V98.7Z"
+                        fill="#FF7A7A" />
+                </g>
+                <g class="midWave">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2660 74.1887L2770.83 70.0801C2881.67 65.9715 3103.33 57.7543 3325 53.6457C3546.67 49.5371 3768.33 49.5371 3990 70.0801C4211.67 90.6232 4433.33 131.709 4655 131.709C4876.67 131.709 5098.33 90.6232 5209.17 70.0801L5320 49.5371V246.75H5209.17C5098.33 246.75 4876.67 246.75 4655 246.75C4433.33 246.75 4211.67 246.75 3990 246.75C3768.33 246.75 3546.67 246.75 3325 246.75C3103.33 246.75 2881.67 246.75 2770.83 246.75H2660V74.1887Z"
+                        fill="#0099FF" fill-opacity="0.7" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2660 74.1887L2549.17 70.0801C2438.33 65.9715 2216.67 57.7543 1995 53.6457C1773.33 49.5371 1551.67 49.5371 1330 70.0801C1108.33 90.6232 886.667 131.709 665 131.709C443.333 131.709 221.667 90.6232 110.833 70.0801L-6.10352e-05 49.5371V246.75H110.833C221.667 246.75 443.333 246.75 665 246.75C886.667 246.75 1108.33 246.75 1330 246.75C1551.67 246.75 1773.33 246.75 1995 246.75C2216.67 246.75 2438.33 246.75 2549.17 246.75H2660V74.1887Z"
+                        fill="#0099FF" fill-opacity="0.7" />
+                </g>
+                <g class="topWave">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2660 0L2770.83 24.675C2881.67 49.35 3103.33 98.7 3325 131.6C3546.67 164.5 3768.33 180.95 3990 189.175C4211.67 197.4 4433.33 197.4 4655 176.837C4876.67 156.275 5098.33 115.15 5209.17 94.5875L5320 74.025V246.75H5209.17C5098.33 246.75 4876.67 246.75 4655 246.75C4433.33 246.75 4211.67 246.75 3990 246.75C3768.33 246.75 3546.67 246.75 3325 246.75C3103.33 246.75 2881.67 246.75 2770.83 246.75H2660V0Z"
+                        fill="#65FF90" fill-opacity="0.5" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2660 0L2549.17 24.675C2438.33 49.35 2216.67 98.7 1995 131.6C1773.33 164.5 1551.67 180.95 1330 189.175C1108.33 197.4 886.667 197.4 665 176.837C443.333 156.275 221.667 115.15 110.833 94.5875L-6.10352e-05 74.025V246.75H110.833C221.667 246.75 443.333 246.75 665 246.75C886.667 246.75 1108.33 246.75 1330 246.75C1551.67 246.75 1773.33 246.75 1995 246.75C2216.67 246.75 2438.33 246.75 2549.17 246.75H2660V0Z"
+                        fill="#65FF90" fill-opacity="0.5" />
+                </g>
+            </g>
+        </svg>
     </section>
 
-    <script src="JS/app.js"></script>
+    <script src="./JS/app.js"></script>
     <script>
         window.onload = () => {
             document.getElementById("loading").style.opacity = 0;

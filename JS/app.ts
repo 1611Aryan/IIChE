@@ -9,38 +9,44 @@ const logo = $('.aboutIIChE__logo');
 const IIChE_Content = $('.aboutIIChE__content')
 
 window.addEventListener('scroll', e => {
+    //?Home Text slides right
     homeText.style.transform = `translateX(${pageYOffset / 2}px)`
         ;
+    //?Logo slides Up
     warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
     if (warTradeLogoText) {
+        //?Logo text slides up along with logo if it exists
         warTradeLogoText.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
     }
-    if (pageYOffset < 1 * window.innerHeight) {
+    if (pageYOffset < 1 * innerHeight) {
         IIChE_Content.style.transition = "none";
         logo.style.transition = "none";
-        let x = Math.abs(pageYOffset - window.innerHeight);
-        logo.style.transform = `translateX(${-x}px)`
-        IIChE_Content.style.transform = `translateX(${x}px)`
+        let x = Math.abs(pageYOffset - innerHeight);
+        //?IIChE logo slides in or out
+        logo.style.transform = `translateX(${-x}px)`;
+        //?About Text slides in or out
+        IIChE_Content.style.transform = `translateX(${x}px)`;
     }
-    if (pageYOffset > 1.5 * window.innerHeight) {
+    if (pageYOffset > 1.5 * innerHeight) {
         $('.plane').style.webkitAnimationPlayState = "running";
     }
-    if (pageYOffset > 2 * window.innerHeight) {
+    if (pageYOffset > 2 * innerHeight) {
         logo.style.transform = `translateX(0px)`;
         logo.style.transition = " translateX 0.3s";
         IIChE_Content.style.transform = `translateX(0px)`;
         IIChE_Content.style.transition = " translateX 0.3s";
+
     }
 })
 
 
 const canvasAbout = $('.aboutIIChE__canvas');
-canvasAbout.width = window.innerWidth;
-canvasAbout.height = window.innerHeight;
+canvasAbout.width = innerWidth;
+canvasAbout.height = innerHeight;
 const aboutC = canvasAbout.getContext('2d');
 window.addEventListener('resize', () => {
-    canvasAbout.width = window.innerWidth;
-    canvasAbout.height = window.innerHeight;
+    canvasAbout.width = innerWidth;
+    canvasAbout.height = innerHeight;
 })
 
 
@@ -91,24 +97,24 @@ function randomColor() {
 const circles = [];
 let radiusFactor = null;
 let speedFactor = null;
-if (window.innerWidth >= 700) {
-    radiusFactor = window.innerWidth / 20;
+if (innerWidth >= 700) {
+    radiusFactor = innerWidth / 20;
     speedFactor = 10
 }
-else if (window.innerWidth < 700) {
-    radiusFactor = window.innerWidth / 15;
+else if (innerWidth < 700) {
+    radiusFactor = innerWidth / 15;
     speedFactor = 8;
 }
-if (window.innerWidth < 400) {
-    radiusFactor = window.innerWidth / 12;
+if (innerWidth < 400) {
+    radiusFactor = innerWidth / 12;
     speedFactor = 6;
 }
 
 
 for (let i = 0; i < 10; i++) {
     let radius = (Math.random() * radiusFactor) + radiusFactor;
-    let x = (Math.random() * (window.innerWidth - radius * 2)) + radius;
-    let y = (Math.random() * (window.innerHeight - radius * 2)) + radius;
+    let x = (Math.random() * (innerWidth - radius * 2)) + radius;
+    let y = (Math.random() * (innerHeight - radius * 2)) + radius;
     let color = randomColor();
     const circle = new Circle(x, y, radius, color, speedFactor);
     circles.push(circle);
