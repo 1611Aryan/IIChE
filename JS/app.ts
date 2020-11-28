@@ -49,22 +49,29 @@ window.addEventListener('resize', () => {
     canvasAbout.height = innerHeight;
 })
 
+class Circle {
+    x: number;
+    y: number;
+    radius: number;
+    color: string;
+    dx: number;
+    dy: number;
+    constructor(x: number, y: number, radius: number, color: string, speed: number) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.dx = (Math.random() * speed) - speed / 2;
+        this.dy = (Math.random() * speed) - speed / 2;
+    }
 
-const Circle = function (x, y, radius, color, speed) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.color = color;
-    this.dx = (Math.random() * speed) - speed / 2;
-    this.dy = (Math.random() * speed) - speed / 2;
-
-    this.render = () => {
+    render = () => {
         aboutC.beginPath();
         aboutC.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         aboutC.fillStyle = this.color;
         aboutC.fill();
     }
-    this.move = () => {
+    move = () => {
         if (this.x + this.radius >= canvasAbout.width || this.x - this.radius <= 0) {
             this.dx = -this.dx;
         }
@@ -75,8 +82,9 @@ const Circle = function (x, y, radius, color, speed) {
         this.y += this.dy;
         this.render();
     }
-    this.render();
+
 }
+
 
 function randomColor() {
     const colorArray = ['rgba(255,0,0,0.4)',
@@ -97,6 +105,7 @@ function randomColor() {
 const circles = [];
 let radiusFactor = null;
 let speedFactor = null;
+//?speed and radius is decided based on the width of device
 if (innerWidth >= 700) {
     radiusFactor = innerWidth / 20;
     speedFactor = 10
@@ -116,6 +125,7 @@ for (let i = 0; i < 10; i++) {
     let x = (Math.random() * (innerWidth - radius * 2)) + radius;
     let y = (Math.random() * (innerHeight - radius * 2)) + radius;
     let color = randomColor();
+    //?Speed factor and radius is used from the if statements present above
     const circle = new Circle(x, y, radius, color, speedFactor);
     circles.push(circle);
 }

@@ -9,7 +9,7 @@
 
 .home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .menu, .home .home__columnOne,
 .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
-.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content, .contact .contact__content, .contact .contact__content .contact__columnTwo, .contact .contact__content .contact__columnTwo .phone, .contact .contact__content .contact__columnTwo .insta {
+.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content, .contact .contact__content, .contact .contact__content .contact__columnTwo, .contact .contact__content .contact__columnTwo .contact__Icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +61,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0.5px;
   display: none;
 }
 
@@ -580,7 +580,7 @@ header nav ul a li {
 }
 
 .sponsor {
-  background: red;
+  background: #667;
 }
 
 .sponsor h1 {
@@ -589,7 +589,7 @@ header nav ul a li {
 }
 
 .register {
-  background: yellow;
+  background: #9ab;
 }
 
 .register h1 {
@@ -642,17 +642,10 @@ header nav ul a li {
 
 .contact .contact__content .contact__columnTwo i {
   color: white;
-  font-size: clamp(1rem, 3vw, 2.75rem);
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 
-.contact .contact__content .contact__columnTwo .phone span {
-  color: white;
-  font-size: clamp(0.5rem, 5vw, 1.7rem);
-  margin-left: 0.5rem;
-  font-family: var(--fontParagraph);
-}
-
-.contact .contact__content .contact__columnTwo .insta span {
+.contact .contact__content .contact__columnTwo .contact__Icon span {
   color: white;
   font-size: clamp(0.5rem, 5vw, 1.7rem);
   margin-left: 0.5rem;

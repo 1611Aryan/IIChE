@@ -42,32 +42,33 @@ window.addEventListener('resize', () => {
     canvasAbout.width = innerWidth;
     canvasAbout.height = innerHeight;
 });
-const Circle = function (x, y, radius, color, speed) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.color = color;
-    this.dx = (Math.random() * speed) - speed / 2;
-    this.dy = (Math.random() * speed) - speed / 2;
-    this.render = () => {
-        aboutC.beginPath();
-        aboutC.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        aboutC.fillStyle = this.color;
-        aboutC.fill();
-    };
-    this.move = () => {
-        if (this.x + this.radius >= canvasAbout.width || this.x - this.radius <= 0) {
-            this.dx = -this.dx;
-        }
-        if (this.y + this.radius >= canvasAbout.height || this.y - this.radius <= 0) {
-            this.dy = -this.dy;
-        }
-        this.x += this.dx;
-        this.y += this.dy;
-        this.render();
-    };
-    this.render();
-};
+class Circle {
+    constructor(x, y, radius, color, speed) {
+        this.render = () => {
+            aboutC.beginPath();
+            aboutC.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            aboutC.fillStyle = this.color;
+            aboutC.fill();
+        };
+        this.move = () => {
+            if (this.x + this.radius >= canvasAbout.width || this.x - this.radius <= 0) {
+                this.dx = -this.dx;
+            }
+            if (this.y + this.radius >= canvasAbout.height || this.y - this.radius <= 0) {
+                this.dy = -this.dy;
+            }
+            this.x += this.dx;
+            this.y += this.dy;
+            this.render();
+        };
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.dx = (Math.random() * speed) - speed / 2;
+        this.dy = (Math.random() * speed) - speed / 2;
+    }
+}
 function randomColor() {
     const colorArray = ['rgba(255,0,0,0.4)',
         'rgba(0,255,0,0.4)',
@@ -86,6 +87,7 @@ function randomColor() {
 const circles = [];
 let radiusFactor = null;
 let speedFactor = null;
+//?speed and radius is decided based on the width of device
 if (innerWidth >= 700) {
     radiusFactor = innerWidth / 20;
     speedFactor = 10;
@@ -103,6 +105,7 @@ for (let i = 0; i < 10; i++) {
     let x = (Math.random() * (innerWidth - radius * 2)) + radius;
     let y = (Math.random() * (innerHeight - radius * 2)) + radius;
     let color = randomColor();
+    //?Speed factor and radius is used from the if statements present above
     const circle = new Circle(x, y, radius, color, speedFactor);
     circles.push(circle);
 }

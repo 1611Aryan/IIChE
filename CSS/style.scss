@@ -54,7 +54,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: 0.5px;
     display: none;
 }
 
@@ -445,7 +445,7 @@ header {
 
 .sponsor {
     @extend %section;
-    background: red;
+    background: #667;
     h1 {
         color: white;
         font-size: clamp(4rem, 8vw, 6rem);
@@ -454,7 +454,7 @@ header {
 
 .register {
     @extend %section;
-    background: yellow;
+    background: #9ab;
     h1 {
         color: white;
         font-size: clamp(4rem, 8vw, 6rem);
@@ -492,19 +492,9 @@ header {
             }
             i {
                 color: white;
-                font-size: clamp(1rem, 3vw, 2.75rem);
+                font-size: clamp(1rem, 5vw, 3rem);
             }
-            .phone {
-                @extend %flex;
-                span {
-                    color: white;
-                    font-size: clamp(0.5rem, 5vw, 1.7rem);
-                    ;
-                    margin-left: 0.5rem;
-                    font-family: var(--fontParagraph);
-                }
-            }
-            .insta {
+            .contact__Icon {
                 @extend %flex;
                 span {
                     color: white;
