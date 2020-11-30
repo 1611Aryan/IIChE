@@ -317,8 +317,8 @@ header nav ul a li {
 .home .home__columnTwo .home__text {
   color: var(--headerText);
   font-size: clamp(6rem, 10vw, 10rem);
-  -webkit-animation: glow 2s linear infinite alternate, entrance 1.2s ease;
-          animation: glow 2s linear infinite alternate, entrance 1.2s ease;
+  color: #ffffff;
+  font-family: var(--fontHeading);
 }
 
 .home .home__columnOne {
@@ -333,8 +333,6 @@ header nav ul a li {
   margin-top: 15%;
   -webkit-transform: scaleX(1.2);
           transform: scaleX(1.2);
-  -webkit-filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
-          filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
 }
 
 .home .home__columnOne #warTradeText {
@@ -660,31 +658,31 @@ header nav ul a li {
 }
 
 .contact .waves .backWave {
-  -webkit-animation: traverse 15s infinite linear alternate;
-          animation: traverse 15s infinite linear alternate;
+  -webkit-animation: traverse 5s infinite linear alternate;
+          animation: traverse 5s infinite linear alternate;
 }
 
 .contact .waves .midWave {
-  -webkit-animation: traverse 15.5s infinite linear alternate;
-          animation: traverse 15.5s infinite linear alternate;
+  -webkit-animation: traverse 2.5s infinite linear alternate;
+          animation: traverse 2.5s infinite linear alternate;
 }
 
 .contact .waves .topWave {
-  -webkit-animation: traverse 16s infinite linear alternate;
-          animation: traverse 16s infinite linear alternate;
+  -webkit-animation: traverse 7s infinite linear alternate;
+          animation: traverse 7s infinite linear alternate;
 }
 
 @-webkit-keyframes traverse {
   to {
-    -webkit-transform: translateX(62.5%);
-            transform: translateX(62.5%);
+    -webkit-transform: translateX(17.5%);
+            transform: translateX(17.5%);
   }
 }
 
 @keyframes traverse {
   to {
-    -webkit-transform: translateX(62.5%);
-            transform: translateX(62.5%);
+    -webkit-transform: translateX(17.5%);
+            transform: translateX(17.5%);
   }
 }
 /*# sourceMappingURL=style.css.map */

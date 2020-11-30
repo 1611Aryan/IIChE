@@ -38,10 +38,6 @@ const canvasAbout = $('.aboutIIChE__canvas');
 canvasAbout.width = innerWidth;
 canvasAbout.height = innerHeight;
 const aboutC = canvasAbout.getContext('2d');
-window.addEventListener('resize', () => {
-    canvasAbout.width = innerWidth;
-    canvasAbout.height = innerHeight;
-});
 class Circle {
     constructor(x, y, radius, color, speed) {
         this.render = () => {
@@ -100,6 +96,10 @@ if (innerWidth < 400) {
     radiusFactor = innerWidth / 12;
     speedFactor = 6;
 }
+window.addEventListener('resize', () => {
+    canvasAbout.width = innerWidth;
+    canvasAbout.height = innerHeight;
+});
 for (let i = 0; i < 10; i++) {
     let radius = (Math.random() * radiusFactor) + radiusFactor;
     let x = (Math.random() * (innerWidth - radius * 2)) + radius;

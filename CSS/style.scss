@@ -256,7 +256,9 @@ header {
         .home__text {
             color: var(--headerText);
             font-size: clamp(6rem, 10vw, 10rem);
-            animation: glow 2s linear infinite alternate, entrance 1.2s ease;
+            color: #ffffff;
+            font-family: var(--fontHeading);
+            //animation: glow 2s linear infinite alternate, entrance 1.2s ease;
         }
     }
     .home__columnOne {
@@ -265,7 +267,7 @@ header {
             width: 35%;
             margin-top: 15%;
             transform: scaleX(1.2);
-            filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
+            //filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
         }
         #warTradeText {
             display: none;
@@ -513,19 +515,19 @@ header {
         bottom: 0;
         right: 0;
         .backWave {
-            animation: traverse 15s infinite linear alternate;
+            animation: traverse 5s infinite linear alternate;
         }
         .midWave {
-            animation: traverse 15.5s infinite linear alternate;
+            animation: traverse 2.5s infinite linear alternate;
         }
         .topWave {
-            animation: traverse 16s infinite linear alternate;
+            animation: traverse 7s infinite linear alternate;
         }
     }
 }
 
 @keyframes traverse {
     to {
-        transform: translateX(62.5%);
+        transform: translateX(17.5%);
     }
 }
