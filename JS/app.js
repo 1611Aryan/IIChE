@@ -6,7 +6,7 @@ const warTradeLogo = $('.wtLogo');
 const warTradeLogoText = $('#warTradeText');
 const logo = $('.aboutIIChE__logo');
 const IIChE_Content = $('.aboutIIChE__content');
-window.addEventListener('scroll', e => {
+addEventListener('scroll', e => {
     //?Home Text slides right
     homeText.style.transform = `translateX(${pageYOffset / 2}px)`;
     //?Logo slides Up
@@ -38,6 +38,15 @@ menuButton.addEventListener('click', () => {
     document.body.classList.toggle('enableScrolling');
     menuButton.classList.toggle('fa-times');
     menuContent.classList.toggle('linkIt');
+});
+const menuLinks = document.querySelectorAll('.menu__content li');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.toggle('expand');
+        document.body.classList.toggle('enableScrolling');
+        menuButton.classList.toggle('fa-times');
+        menuContent.classList.toggle('linkIt');
+    });
 });
 const canvasAbout = $('.aboutIIChE__canvas');
 canvasAbout.width = innerWidth;

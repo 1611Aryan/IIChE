@@ -490,10 +490,10 @@ menu .linkIt {
 .aboutIIChE .aboutIIChE__logo {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: -webkit-transform ease-in-out 0.5s;
-  transition: -webkit-transform ease-in-out 0.5s;
-  transition: transform ease-in-out 0.5s;
-  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+  -webkit-transition: -webkit-transform ease 0.7s;
+  transition: -webkit-transform ease 0.7s;
+  transition: transform ease 0.7s;
+  transition: transform ease 0.7s, -webkit-transform ease 0.7s;
 }
 
 .aboutIIChE .aboutIIChE__logo picture {
@@ -516,10 +516,10 @@ menu .linkIt {
   color: white;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform ease-in-out 0.5s;
-  transition: -webkit-transform ease-in-out 0.5s;
-  transition: transform ease-in-out 0.5s;
-  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+  -webkit-transition: -webkit-transform ease 0.7s;
+  transition: -webkit-transform ease 0.7s;
+  transition: transform ease 0.7s;
+  transition: transform ease 0.7s, -webkit-transform ease 0.7s;
 }
 
 .aboutIIChE .aboutIIChE__content h1 {
