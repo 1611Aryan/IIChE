@@ -16,7 +16,7 @@ window.addEventListener('scroll', e => {
     if (innerWidth > 600) {
         warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
     }
-    if (pageYOffset < 1 * innerHeight) {
+    if (pageYOffset < 1.2 * innerHeight) {
         // let x = Math.abs(pageYOffset - innerHeight);
         // //?IIChE logo slides in or out
         // logo.style.transform = `translateX(${1.2 * -x}px)`;
