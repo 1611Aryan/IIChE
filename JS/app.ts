@@ -13,10 +13,8 @@ window.addEventListener('scroll', e => {
     homeText.style.transform = `translateX(${pageYOffset / 2}px)`
         ;
     //?Logo slides Up
-    warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
-    if (warTradeLogoText) {
-        //?Logo text slides up along with logo if it exists
-        warTradeLogoText.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
+    if (innerWidth > 600) {
+        warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
     }
     if (pageYOffset < 1 * innerHeight) {
         IIChE_Content.style.transition = "none";
@@ -38,6 +36,18 @@ window.addEventListener('scroll', e => {
 
     }
 })
+
+const menuButton = $('#menu__toggle');
+const menu = $('.menu');
+const menuContent = $('.menu__content');
+menuButton.addEventListener('click', () => {
+    menu.classList.toggle('expand');
+    document.body.classList.toggle('enableScrolling');
+    menuButton.classList.toggle('fa-times');
+    menuContent.classList.toggle('linkIt');
+})
+
+
 
 
 const canvasAbout = $('.aboutIIChE__canvas');

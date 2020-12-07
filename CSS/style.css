@@ -7,7 +7,7 @@
   --fontParagraph: 'Noto Sans JP', sans-serif;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, .menu, .home .home__columnOne,
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, menu .menu, menu .menuButton, .home .home__columnOne,
 .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
 .aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content, .contact .contact__content, .contact .contact__content .contact__columnTwo, .contact .contact__content .contact__columnTwo .contact__Icon {
   display: -webkit-box;
@@ -58,6 +58,10 @@ body {
   font-family: 'Nerko One', cursive;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.enableScrolling {
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -148,7 +152,7 @@ body {
 
 .loading {
   z-index: 9999999;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -272,7 +276,7 @@ header nav ul a li {
   font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
-.menu {
+menu .menu {
   position: fixed;
   right: 2%;
   bottom: 5%;
@@ -283,12 +287,61 @@ header nav ul a li {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   z-index: 999;
+  -webkit-transition: all ease-in-out 0.5s, border-radius 0.3s;
+  transition: all ease-in-out 0.5s, border-radius 0.3s;
 }
 
-.menu i {
+menu .menu .menu__content {
+  width: 45%;
+  height: 55%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+menu .menu .menu__content ul {
+  list-style-type: none;
+}
+
+menu .menu .menu__content ul a {
+  text-decoration: none;
+}
+
+menu .menu .menu__content ul a li {
+  color: black;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(0.7rem, 3vw, 1rem);
+  cursor: pointer;
+}
+
+menu .menuButton {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 9999;
+}
+
+menu .menuButton #menu__toggle {
   font-size: 200%;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+
+menu .expand {
+  right: calc(-50vw);
+  bottom: calc(-50vw);
+  width: 100vw;
+  height: 100vw;
+  border-radius: 50%;
+}
+
+menu .linkIt {
+  opacity: 1 !important;
+  pointer-events: all;
 }
 
 .home .home__bg {
@@ -297,14 +350,29 @@ header nav ul a li {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
   z-index: -1;
 }
 
+.home .home__bg picture {
+  width: 150%;
+}
+
 .home .home__bg picture img {
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
+}
+
+.home .home__bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 2;
 }
 
 .home .home__columnOne,

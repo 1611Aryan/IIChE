@@ -86,11 +86,24 @@
 }
 
 @media only screen and (max-width:400px) {
-    .menu {
-        width: 50px;
-        height: 50px;
-        i {
-            font-size: 180%;
+    menu {
+        .menu {
+            width: 50px;
+            height: 50px;
+        }
+        .menuButton {
+            width: 50px;
+            height: 50px;
+            #menu__toggle {
+                font-size: 180%;
+            }
+        }
+        .expand {
+            right: calc(-150vw);
+            bottom: calc(-150vw);
+            width: 300vw;
+            height: 300vw;
+            border-radius: 50%;
         }
     }
     .aboutEvent {

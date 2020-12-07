@@ -108,9 +108,39 @@
 
     </header>
 
-    <div class="menu">
-        <i class="fas fa-bars"></i>
-    </div>
+    <menu>
+        <div class="menuButton">
+            <i id="menu__toggle" class="fas fa-bars"></i>
+        </div>
+
+        <div class="menu">
+
+            <div class="menu__content">
+                <ul>
+                    <a href="#about">
+                        <li>About</li>
+                    </a>
+                    <a href="#timeline">
+                        <li>Timeline</li>
+                    </a>
+                    <a href="#prizes">
+                        <li>Prizes</li>
+                    </a>
+                    <a href="#sponsor">
+                        <li>Sponsors</li>
+                    </a>
+                    <a href="#register">
+                        <li>Register</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+
+            </div>
+        </div>
+    </menu>
+
 
     <section class="home" id="home">
         <div class="home__bg parallax">
@@ -196,7 +226,8 @@
                 </span> and <span class="aboutEvent__content-emphasise">Persuasion Skills</span> on a global scale.
                 <br> During the event, participants will be collaborating in teams of representative <span class="aboutEvent__content-emphasise">countries</span> with a preassigned monetary <span class="aboutEvent__content-emphasise">budget.</span> They’ll
                 be battling it out with other teams by boasting their <span class="aboutEvent__content-emphasise">superior firepower</span> in terms of bombs and negotiation skills. Players will have to compete in a sudden verbal cross-fire and haggle
-                in a intense <span class="aboutEvent__content-emphasise">tradewar</span> with other countries as sudden crisis strikes and <span class="aboutEvent__content-emphasise">political powerplay</span> comes into play.
+                in a intense <span class="aboutEvent__content-emphasise">tradewar</span> with other countries as sudden crisis strikes and <span class="aboutEvent__content-emphasise">political
+                    powerplay</span> comes into play.
                 <br> WarTrade has plenty to motivate , encourage and enjoy in a competitive inter-team interaction and is bound to BLOW everyones minds.
             </p>
         </div>
@@ -283,7 +314,7 @@
             document.getElementById("loading").style.opacity = 0;
             document.getElementById("loading").addEventListener("transitionend", () => {
                 document.getElementById("loading").style.display = "none";
-                document.body.style.overflowY = 'scroll';
+                document.body.classList.add('enableScrolling');
             })
             $('.plane').style.webkitAnimationPlayState = "paused";
         }

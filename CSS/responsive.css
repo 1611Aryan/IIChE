@@ -101,12 +101,23 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .menu {
+  menu .menu {
     width: 50px;
     height: 50px;
   }
-  .menu i {
+  menu .menuButton {
+    width: 50px;
+    height: 50px;
+  }
+  menu .menuButton #menu__toggle {
     font-size: 180%;
+  }
+  menu .expand {
+    right: calc(-150vw);
+    bottom: calc(-150vw);
+    width: 300vw;
+    height: 300vw;
+    border-radius: 50%;
   }
   .aboutEvent .aboutEvent__content {
     width: 90%;

@@ -53,6 +53,10 @@ body {
     overflow-y: hidden;
 }
 
+.enableScrolling {
+    overflow-y: scroll;
+}
+
 ::-webkit-scrollbar {
     width: 0.5px;
     display: none;
@@ -116,7 +120,7 @@ body {
 
 .loading {
     z-index: 9999999;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -208,21 +212,65 @@ header {
 }
 
 //*Nav Menu
-.menu {
-    position: fixed;
-    right: 2%;
-    bottom: 5%;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    @extend %flex;
-    i {
-        font-size: 200%;
-        color: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
+menu {
+    .menu {
+        position: fixed;
+        right: 2%;
+        bottom: 5%;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        transition: all ease-in-out 0.5s, border-radius 0.3s;
+        @extend %flex;
+        .menu__content {
+            width: 45%;
+            height: 55%;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            //pointer-events: none;
+            ul {
+                list-style-type: none;
+                a {
+                    text-decoration: none;
+                    li {
+                        color: black;
+                        font-size: clamp(1.5rem, 4vw, 2rem);
+                        margin-bottom: clamp(0.7rem, 3vw, 1rem);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .menuButton {
+        position: fixed;
+        right: 2%;
+        bottom: 5%;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: transparent;
+        z-index: 9999;
+        @extend %flex;
+        #menu__toggle {
+            font-size: 200%;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    }
+    .expand {
+        right: calc(-50vw);
+        bottom: calc(-50vw);
+        width: 100vw;
+        height: 100vw;
+        border-radius: 50%;
+    }
+    .linkIt {
+        opacity: 1 !important;
+        pointer-events: all;
     }
 }
 
@@ -237,13 +285,24 @@ header {
         height: 100%;
         @extend %image;
         picture {
+            width: 150%;
             img {
-                width: 110%;
-                height: 110%;
+                width: 100%;
+                height: 100%;
             }
         }
-        filter: blur(1px);
         z-index: -1;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            backdrop-filter: blur(2px);
+            z-index: 2;
+        }
     }
     .home__columnOne,
     .home__columnTwo {
