@@ -14,22 +14,20 @@ window.addEventListener('scroll', e => {
         warTradeLogo.style.transform = `scaleX(1.2) translateY(-${pageYOffset / 2}px )`;
     }
     if (pageYOffset < 1 * innerHeight) {
-        IIChE_Content.style.transition = "none";
-        logo.style.transition = "none";
-        let x = Math.abs(pageYOffset - innerHeight);
-        //?IIChE logo slides in or out
-        logo.style.transform = `translateX(${-x}px)`;
-        //?About Text slides in or out
-        IIChE_Content.style.transform = `translateX(${x}px)`;
+        // let x = Math.abs(pageYOffset - innerHeight);
+        // //?IIChE logo slides in or out
+        // logo.style.transform = `translateX(${1.2 * -x}px)`;
+        logo.classList.add('restorePosition');
+        IIChE_Content.classList.add('restorePosition');
+        // //?About Text slides in or out
+        // IIChE_Content.style.transform = `translateX(${1.2 * x}px)`;
     }
     if (pageYOffset > 1.5 * innerHeight) {
         $('.plane').style.webkitAnimationPlayState = "running";
     }
-    if (pageYOffset > 2 * innerHeight) {
-        logo.style.transform = `translateX(0px)`;
-        logo.style.transition = " translateX 0.3s";
-        IIChE_Content.style.transform = `translateX(0px)`;
-        IIChE_Content.style.transition = " translateX 0.3s";
+    if (pageYOffset > 1.6 * innerHeight) {
+        logo.classList.remove('restorePosition');
+        IIChE_Content.classList.remove('restorePosition');
     }
 });
 const menuButton = $('#menu__toggle');

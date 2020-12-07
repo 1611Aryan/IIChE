@@ -58,6 +58,7 @@ body {
   font-family: 'Nerko One', cursive;
   overflow-x: hidden;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .enableScrolling {
@@ -486,6 +487,15 @@ menu .linkIt {
   height: 100%;
 }
 
+.aboutIIChE .aboutIIChE__logo {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform ease-in-out 0.5s;
+  transition: -webkit-transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+}
+
 .aboutIIChE .aboutIIChE__logo picture {
   width: 60%;
 }
@@ -504,6 +514,12 @@ menu .linkIt {
       -ms-flex-align: start;
           align-items: flex-start;
   color: white;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform ease-in-out 0.5s;
+  transition: -webkit-transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
 }
 
 .aboutIIChE .aboutIIChE__content h1 {
@@ -516,6 +532,11 @@ menu .linkIt {
   width: 85%;
   font-size: clamp(0.8rem, 3vw, 2rem);
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+.aboutIIChE .restorePosition {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .aboutEvent {
