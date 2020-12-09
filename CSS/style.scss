@@ -441,8 +441,6 @@ menu {
     }
     .plane {
         position: absolute;
-        // bottom: 5%;
-        // left: 0;
         top: 5%;
         left: 0;
         width: 15%;
@@ -526,10 +524,110 @@ menu {
 //*The sponsors section
 .sponsor {
     @extend %section;
+    flex-direction: column;
     background: #667;
-    h1 {
+    justify-content: space-evenly;
+    .sponsor__heading {
+        height: 15%;
+        width: 92%;
         color: white;
-        font-size: clamp(4rem, 8vw, 6rem);
+        h1 {
+            font-family: var(--fontHeading);
+            font-size: clamp(2rem, 3vw, 3rem);
+        }
+        p {
+            width: 55%;
+            font-size: clamp(0.6rem, 3vw, 1.25rem);
+            font-family: var(--fontParagraph);
+        }
+    }
+    .sponsor__content {
+        @extend %flex;
+        width: 100%;
+        height: 55%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        @for $i from 1 through 5 {
+            .sponsorCardContainer:nth-of-type(#{$i}) .card .frontCard h2 {
+                animation-delay: #{$i/2.5}s;
+            }
+        }
+        .sponsorCardContainer {
+            width: 15%;
+            height: 75%;
+            position: relative;
+            .card {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition: transform ease-out 1s;
+                transform-style: preserve-3d;
+                margin: 0;
+                figure {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    margin: 0;
+                    border-radius: 20px;
+                    @extend %flex;
+                    flex-direction: column;
+                }
+                .frontCard {
+                    background: linear-gradient(to top, #727f9c, #667);
+                    @extend %image;
+                    justify-content: space-evenly;
+                    h2 {
+                        text-align: center;
+                        width: 80%;
+                        font-size: clamp(0.9rem, 3vw, 1.5rem);
+                        font-family: var(--fontHeading);
+                        color: white;
+                        animation: jiggle 2s linear infinite;
+                    }
+                    picture {
+                        width: 60%;
+                    }
+                }
+                .backCard {
+                    transform: rotateY(180deg);
+                    //background: linear-gradient(to top, #fffc63, #cdfd5d);#667
+                    background: linear-gradient(to bottom, #727f9c, #667);
+                    //?background: linear-gradient(to bottom, #606c88, #3f4c6b);
+                    p {
+                        width: 80%;
+                        color: white;
+                        font-size: clamp(0.6rem, 3vw, 0.9rem);
+                        font-family: var(--fontParagraph);
+                    }
+                }
+            }
+            &:hover .card {
+                transform: rotateY(180deg) !important;
+            }
+        }
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: skew(10deg, -5deg);
+    }
+    5% {
+        transform: skew(-10deg, 5deg);
+    }
+    10% {
+        transform: skew(10deg, -5deg);
+    }
+    15% {
+        transform: skew(-10deg, 5deg);
+    }
+    20% {
+        transform: skew(0deg);
+    }
+    100% {
+        transform: skew(0deg);
     }
 }
 

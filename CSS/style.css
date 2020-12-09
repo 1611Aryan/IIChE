@@ -7,9 +7,9 @@
   --fontParagraph: 'Noto Sans JP', sans-serif;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .register .register__bg picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, menu .menu, menu .menuButton, .home .home__columnOne,
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture, .register .register__bg picture, .home, .aboutIIChE, .aboutEvent, .timeline, .prizes, .sponsor, .register, .contact, .loading, header nav, header nav picture, header nav ul, menu .menu, menu .menuButton, .home .home__columnOne,
 .home .home__columnTwo, .aboutIIChE .aboutIIChE__logo,
-.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content, .register .register__content, .contact .contact__content, .contact .contact__content .contact__columnTwo, .contact .contact__content .contact__columnTwo .contact__Icon {
+.aboutIIChE .aboutIIChE__content, .aboutEvent .aboutEvent__content, .sponsor .sponsor__content, .sponsor .sponsor__content .sponsorCardContainer .card figure, .register .register__content, .contact .contact__content, .contact .contact__content .contact__columnTwo, .contact .contact__content .contact__columnTwo .contact__Icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,12 +21,12 @@
           align-items: center;
 }
 
-.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .register .register__bg picture {
+.home .home__bg picture, .aboutIIChE .aboutIIChE__logo picture, .sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture, .register .register__bg picture {
   width: 100%;
   height: 100%;
 }
 
-.home .home__bg picture img, .aboutIIChE .aboutIIChE__logo picture img, .register .register__bg picture img {
+.home .home__bg picture img, .aboutIIChE .aboutIIChE__logo picture img, .sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture img, .register .register__bg picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -682,12 +682,194 @@ menu .linkIt {
 }
 
 .sponsor {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #667;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.sponsor h1 {
+.sponsor .sponsor__heading {
+  height: 15%;
+  width: 92%;
   color: white;
-  font-size: clamp(4rem, 8vw, 6rem);
+}
+
+.sponsor .sponsor__heading h1 {
+  font-family: var(--fontHeading);
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.sponsor .sponsor__heading p {
+  width: 55%;
+  font-size: clamp(0.6rem, 3vw, 1.25rem);
+  font-family: var(--fontParagraph);
+}
+
+.sponsor .sponsor__content {
+  width: 100%;
+  height: 55%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer:nth-of-type(1) .card .frontCard h2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer:nth-of-type(2) .card .frontCard h2 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer:nth-of-type(3) .card .frontCard h2 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer:nth-of-type(4) .card .frontCard h2 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer:nth-of-type(5) .card .frontCard h2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer {
+  width: 15%;
+  height: 75%;
+  position: relative;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform ease-out 1s;
+  transition: -webkit-transform ease-out 1s;
+  transition: transform ease-out 1s;
+  transition: transform ease-out 1s, -webkit-transform ease-out 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin: 0;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  border-radius: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card .frontCard {
+  background: -webkit-gradient(linear, left bottom, left top, from(#727f9c), to(#667));
+  background: linear-gradient(to top, #727f9c, #667);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card .frontCard h2 {
+  text-align: center;
+  width: 80%;
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
+  font-family: var(--fontHeading);
+  color: white;
+  -webkit-animation: jiggle 2s linear infinite;
+          animation: jiggle 2s linear infinite;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture {
+  width: 60%;
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card .backCard {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: -webkit-gradient(linear, left top, left bottom, from(#727f9c), to(#667));
+  background: linear-gradient(to bottom, #727f9c, #667);
+}
+
+.sponsor .sponsor__content .sponsorCardContainer .card .backCard p {
+  width: 80%;
+  color: white;
+  font-size: clamp(0.6rem, 3vw, 0.9rem);
+  font-family: var(--fontParagraph);
+}
+
+.sponsor .sponsor__content .sponsorCardContainer:hover .card {
+  -webkit-transform: rotateY(180deg) !important;
+          transform: rotateY(180deg) !important;
+}
+
+@-webkit-keyframes jiggle {
+  0% {
+    -webkit-transform: skew(10deg, -5deg);
+            transform: skew(10deg, -5deg);
+  }
+  5% {
+    -webkit-transform: skew(-10deg, 5deg);
+            transform: skew(-10deg, 5deg);
+  }
+  10% {
+    -webkit-transform: skew(10deg, -5deg);
+            transform: skew(10deg, -5deg);
+  }
+  15% {
+    -webkit-transform: skew(-10deg, 5deg);
+            transform: skew(-10deg, 5deg);
+  }
+  20% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+}
+
+@keyframes jiggle {
+  0% {
+    -webkit-transform: skew(10deg, -5deg);
+            transform: skew(10deg, -5deg);
+  }
+  5% {
+    -webkit-transform: skew(-10deg, 5deg);
+            transform: skew(-10deg, 5deg);
+  }
+  10% {
+    -webkit-transform: skew(10deg, -5deg);
+            transform: skew(10deg, -5deg);
+  }
+  15% {
+    -webkit-transform: skew(-10deg, 5deg);
+            transform: skew(-10deg, 5deg);
+  }
+  20% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
 }
 
 .register {
