@@ -335,24 +335,6 @@ menu {
     }
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e2e600, 0 0 20px #e2e600, 0 0 25px #e2e600, 0 0 30px #e2e600, 0 0 35px #e2e600;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #dcdf2b, 0 0 15px #dcdf2b, 0 0 20px #dcdf2b, 0 0 25px #dcdf2b, 0 0 30px #dcdf2b, 0 0 35px #dcdf2b;
-    }
-}
-
-@keyframes glow2 {
-    from {
-        filter: drop-shadow(0 0 2.5px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 3.5px #e2e600) drop-shadow(0 0 4px #e2e600) drop-shadow(0 0 4.5px #e2e600) drop-shadow(0 0 5px #e2e600);
-    }
-    to {
-        filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 4.5px #fff) drop-shadow(0 0 5px #dcdf2b) drop-shadow(0 0 5.5px #dcdf2b) drop-shadow(0 0 6px #dcdf2b) drop-shadow(0 0 6.5px #dcdf2b);
-    }
-}
-
 @keyframes entrance {
     0% {
         transform: translate3d(200%, 0, 0) scale(0);
@@ -536,7 +518,7 @@ menu {
             font-size: clamp(2rem, 3vw, 3rem);
         }
         p {
-            width: 55%;
+            width: 75%;
             font-size: clamp(0.6rem, 3vw, 1.25rem);
             font-family: var(--fontParagraph);
         }
@@ -563,20 +545,22 @@ menu {
                 transition: transform ease-out 1s;
                 transform-style: preserve-3d;
                 margin: 0;
+                border-radius: 20px;
                 figure {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    min-width: 100%;
-                    min-height: 100%;
+                    width: 100%;
+                    height: 100%;
                     margin: 0;
                     border-radius: 20px;
                     @extend %flex;
                     flex-direction: column;
+                    overflow: hidden;
+                    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
                 }
                 .frontCard {
                     background: linear-gradient(to top, #727f9c, #667);
-                    @extend %image;
                     justify-content: space-evenly;
                     h2 {
                         text-align: center;
@@ -588,6 +572,11 @@ menu {
                     }
                     picture {
                         width: 60%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
                     }
                 }
                 .backCard {
@@ -598,7 +587,7 @@ menu {
                     p {
                         width: 80%;
                         color: white;
-                        font-size: clamp(0.6rem, 3vw, 0.9rem);
+                        font-size: clamp(0.6rem, 2vw, 0.9rem);
                         font-family: var(--fontParagraph);
                     }
                 }

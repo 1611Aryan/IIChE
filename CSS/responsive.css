@@ -14,6 +14,54 @@
   #progressBar {
     width: 1.1vw;
   }
+  .sponsor {
+    height: 150vh;
+  }
+  .sponsor .sponsor__heading {
+    height: 15%;
+    width: 92%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sponsor .sponsor__content {
+    height: 75%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer {
+    width: 40%;
+    height: 30%;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card figure {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard h2 {
+    width: 40%;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture {
+    height: 60%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -104,6 +152,54 @@
   .register .register__bomb {
     width: 60%;
   }
+  .sponsor {
+    height: 150vh;
+  }
+  .sponsor .sponsor__heading {
+    height: 15%;
+    width: 92%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sponsor .sponsor__content {
+    height: 75%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer {
+    width: 45%;
+    height: 30%;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card figure {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard h2 {
+    width: 50%;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture {
+    height: 40%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -150,6 +246,15 @@
   }
   .contact .contact__content .contact__columnOne h1 {
     margin-bottom: 0.75rem;
+  }
+  .sponsor {
+    height: 150vh;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard h2 {
+    width: 55%;
+  }
+  .sponsor .sponsor__content .sponsorCardContainer .card .frontCard picture {
+    height: 35%;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

@@ -18,6 +18,40 @@
     #progressBar {
         width: 1.1vw;
     }
+    .sponsor {
+        height: 150vh;
+        .sponsor__heading {
+            height: 15%;
+            width: 92%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .sponsor__content {
+            height: 75%;
+            flex-direction: row;
+            .sponsorCardContainer {
+                width: 40%;
+                height: 30%;
+                .card {
+                    figure {
+                        flex-direction: row;
+                    }
+                    .frontCard {
+                        justify-content: space-around;
+                        h2 {
+                            width: 40%;
+                        }
+                        picture {
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:600px) {
@@ -91,6 +125,40 @@
             width: 60%;
         }
     }
+    .sponsor {
+        height: 150vh;
+        .sponsor__heading {
+            height: 15%;
+            width: 92%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .sponsor__content {
+            height: 75%;
+            flex-direction: row;
+            .sponsorCardContainer {
+                width: 45%;
+                height: 30%;
+                .card {
+                    figure {
+                        flex-direction: row;
+                    }
+                    .frontCard {
+                        justify-content: space-around;
+                        h2 {
+                            width: 50%;
+                        }
+                        picture {
+                            height: 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:400px) {
@@ -135,6 +203,23 @@
             .contact__columnOne {
                 h1 {
                     margin-bottom: 0.75rem;
+                }
+            }
+        }
+    }
+    .sponsor {
+        height: 150vh;
+        .sponsor__content {
+            .sponsorCardContainer {
+                .card {
+                    .frontCard {
+                        h2 {
+                            width: 55%;
+                        }
+                        picture {
+                            height: 35%;
+                        }
+                    }
                 }
             }
         }
