@@ -1,5 +1,5 @@
 :root {
-  --loadingBg: rgba(0, 0, 0, 0.5);
+  --loadingBg: rgba(0, 0, 0, 0.8);
   --homeBg: #121312;
   --header: #333333;
   --headerText: #ffffff;
