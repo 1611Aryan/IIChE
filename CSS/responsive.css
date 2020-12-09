@@ -98,6 +98,9 @@
   .aboutIIChE .aboutIIChE__content {
     width: 60%;
   }
+  .aboutIIChE .aboutIIChE__logo {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 400px) {

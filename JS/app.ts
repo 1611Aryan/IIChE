@@ -54,14 +54,10 @@ menuLinks.forEach(link => {
     })
 })
 
-
-
 const canvasAbout = $('.aboutIIChE__canvas');
 canvasAbout.width = innerWidth;
 canvasAbout.height = innerHeight;
 const aboutC = canvasAbout.getContext('2d');
-
-
 class Circle {
     x: number;
     y: number;
