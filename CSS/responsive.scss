@@ -55,6 +55,14 @@
             }
         }
     }
+    .aboutIIChE {
+        .aboutIIChE__content {
+            width: 60%;
+        }
+        .aboutIIChE__logo {
+            width: 40%;
+        }
+    }
     .aboutEvent {
         perspective: 0px;
         .plane {
@@ -76,14 +84,6 @@
     @keyframes fly {
         to {
             transform: translate(500%, 500%) skewX(-15deg);
-        }
-    }
-    .aboutIIChE {
-        .aboutIIChE__content {
-            width: 60%;
-        }
-        .aboutIIChE__logo {
-            width: 40%;
         }
     }
 }
@@ -115,6 +115,22 @@
             justify-content: center;
             h1 {
                 margin-bottom: 1rem;
+            }
+        }
+    }
+    .contact {
+        .contact__content {
+            flex-direction: column;
+            height: 90%;
+            justify-content: space-evenly;
+            .contact__columnOne,
+            .contact__columnTwo {
+                width: 80%;
+            }
+            .contact__columnOne {
+                h1 {
+                    margin-bottom: 0.75rem;
+                }
             }
         }
     }
