@@ -48,6 +48,14 @@ menuLinks.forEach(link => {
         menuContent.classList.toggle('linkIt');
     });
 });
+const dayOne = $('.dayOne');
+const dayTwo = $('.dayTwo');
+dayOne.addEventListener('click', () => {
+    dayOne.classList.toggle('swoosh');
+});
+dayTwo.addEventListener('click', () => {
+    dayOne.classList.toggle('swoosh');
+});
 const canvasAbout = $('.aboutIIChE__canvas');
 canvasAbout.width = innerWidth;
 canvasAbout.height = innerHeight;

@@ -22,11 +22,11 @@
         height: 150vh;
         .sponsor__heading {
             height: 15%;
-            width: 92%;
+            width: 86.6666%;
             color: white;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
         }
         .sponsor__content {
@@ -127,15 +127,6 @@
     }
     .sponsor {
         height: 150vh;
-        .sponsor__heading {
-            height: 15%;
-            width: 92%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
         .sponsor__content {
             height: 75%;
             flex-direction: row;

@@ -477,11 +477,44 @@ menu {
 //*The timeline section
 .timeline {
     @extend %section;
-    height: 200vh;
     background: linear-gradient(to bottom, #121314 50%, #191C1D);
-    h1 {
-        font-size: 6rem;
-        color: white;
+    .timeline__pageContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        perspective: 2500px;
+        transform-style: preserve-3d;
+        transform-origin: left;
+        perspective-origin: 70% left;
+        .timeline__page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @extend %flex;
+            flex-direction: column;
+            transform-origin: left;
+            border-radius: 0px 10px 10px 0px;
+            h1 {
+                font-size: clamp(4.5rem, 7vw, 6.5rem);
+            }
+            h2 {
+                font-size: clamp(4rem, 7vw, 6rem);
+            }
+        }
+        .dayOne {
+            background: linear-gradient(to bottom, #43474b 50%, #1b2022);
+            transition: transform ease-out 1.5s;
+            z-index: 3;
+        }
+        .dayTwo {
+            background: linear-gradient(to top, #121314 50%, #191C1D);
+            z-index: 2;
+        }
+        .swoosh {
+            transform: rotateY(-90deg);
+        }
     }
 }
 
