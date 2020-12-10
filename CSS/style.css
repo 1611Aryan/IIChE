@@ -622,10 +622,6 @@ menu .linkIt {
   height: 100%;
   -webkit-perspective: 2500px;
           perspective: 2500px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: left;
-          transform-origin: left;
   -webkit-perspective-origin: 70% left;
           perspective-origin: 70% left;
 }
@@ -642,6 +638,8 @@ menu .linkIt {
           flex-direction: column;
   -webkit-transform-origin: left;
           transform-origin: left;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   border-radius: 0px 10px 10px 0px;
 }
 

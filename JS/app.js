@@ -48,6 +48,7 @@ menuLinks.forEach(link => {
         menuContent.classList.toggle('linkIt');
     });
 });
+//?Timeline
 const dayOne = $('.dayOne');
 const dayTwo = $('.dayTwo');
 dayOne.addEventListener('click', () => {

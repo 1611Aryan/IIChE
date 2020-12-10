@@ -55,7 +55,7 @@ menuLinks.forEach(link => {
 })
 
 
-
+//?Timeline
 const dayOne = $('.dayOne');
 const dayTwo = $('.dayTwo');
 dayOne.addEventListener('click', () => {
