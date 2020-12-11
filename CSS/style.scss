@@ -702,8 +702,15 @@ menu {
             color: white;
             font-size: clamp(0.7rem, 3vw, 1.75rem);
             font-family: var(--fontParagraph);
-            &:nth-of-type(2) {
-                align-self: flex-start;
+        }
+        a {
+            align-self: flex-start;
+            text-decoration: none;
+            .register_button {
+                background: coral;
+                padding: 10px 15px;
+                border-radius: 10px;
+                cursor: pointer;
             }
         }
     }

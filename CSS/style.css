@@ -1023,9 +1023,17 @@ menu .linkIt {
   font-family: var(--fontParagraph);
 }
 
-.register .register__content p:nth-of-type(2) {
+.register .register__content a {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  text-decoration: none;
+}
+
+.register .register__content a .register_button {
+  background: coral;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .register .register__bomb {
