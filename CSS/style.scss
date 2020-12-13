@@ -1,5 +1,5 @@
 :root {
-    --loadingBg: rgba(0, 0, 0, 0.8);
+    --loadingBg: rgba(0, 0, 0, 0.98);
     --homeBg: #121312;
     --header: #333333;
     --headerText: #ffffff;
@@ -502,7 +502,7 @@ menu {
             color: white;
             h1 {
                 font-family: var(--fontHeading);
-                font-size: clamp(1.3rem, 5vw, 3rem);
+                font-size: clamp(2.5rem, 7vw, 4rem);
             }
         }
         .dayOne {
