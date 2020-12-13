@@ -4,12 +4,19 @@
   }
   header nav picture {
     margin-top: 0;
+    width: 18%;
+    height: 80%;
   }
   header nav picture img {
     width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   header nav ul {
-    width: 70% !important;
+    width: 85%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #progressBar {
     width: 1.1vw;
@@ -148,6 +155,68 @@
       -webkit-transform: translate(500%, 500%) skewX(-15deg);
               transform: translate(500%, 500%) skewX(-15deg);
     }
+  }
+  .timeline .timeline__pageContainer .dayOne {
+    --timelineCardWidth: 40%;
+    --timelineCardHeight: calc(30%/var(--timelineHeight)*100) !important;
+    --timelineBullet: calc(-25% - 10px);
+  }
+  .timeline .timeline__pageContainer .dayTwo {
+    --timelineCardWidth: 36%;
+    --timelineCardHeight: calc(32%/var(--timelineHeight)*100);
+    --timelineBullet: calc(-700%/18 - 10px);
+  }
+  .timeline .timeline__pageContainer .timelineCardContainer {
+    width: 95%;
+    height: 90%;
+    position: relative;
+  }
+  .timeline .timeline__pageContainer .timelineCardContainer .timeline__content {
+    position: relative;
+    width: var(--timelineCardWidth);
+    height: var(--timelineCardHeight);
+  }
+  .timeline .timeline__pageContainer .timelineCardContainer .timeline__content picture {
+    width: 80%;
+    height: 60%;
+  }
+  .timeline .timeline__pageContainer .timelineCardContainer .timeline__content picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .prizes .prizes__content .prizes__heading {
+    width: 95%;
+    height: 15%;
+  }
+  .prizes .prizes__content .prizes__container {
+    height: 70%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prizes .prizes__content .prizes__container .card {
+    width: 80%;
+    height: 30%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .prizes .prizes__content .prizes__container .card .img__container {
+    height: 80%;
+  }
+  .prizes .prizes__content .prizes__container .card .img__container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .prizes .prizes__content .certificate {
+    width: 95%;
+    height: 20%;
   }
   .register .register__bomb {
     width: 60%;

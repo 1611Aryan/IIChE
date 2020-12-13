@@ -5,6 +5,7 @@
     --headerText: #ffffff;
     --fontHeading: 'ABeeZee', sans-serif;
     --fontParagraph: 'Noto Sans JP', sans-serif;
+    --timelineHeight: 250;
 }
 
 %flex {
@@ -193,6 +194,8 @@ header {
             @extend %flex;
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
         ul {
@@ -477,6 +480,7 @@ menu {
 //*The timeline section
 .timeline {
     @extend %section;
+    height: calc(var(--timelineHeight)*1vh);
     background: linear-gradient(to bottom, #121314 50%, #191C1D);
     .timeline__pageContainer {
         position: relative;
@@ -495,24 +499,106 @@ menu {
             transform-origin: left;
             transform-style: preserve-3d;
             border-radius: 0px 10px 10px 0px;
+            color: white;
             h1 {
-                font-size: clamp(4.5rem, 7vw, 6.5rem);
-            }
-            h2 {
-                font-size: clamp(4rem, 7vw, 6rem);
+                font-family: var(--fontHeading);
+                font-size: clamp(1.3rem, 5vw, 3rem);
             }
         }
         .dayOne {
             background: linear-gradient(to bottom, #43474b 50%, #1b2022);
             transition: transform ease-out 1.5s;
             z-index: 3;
+            justify-content: space-around;
+            --timelineCardWidth: 40%;
+            --timelineCardHeight: calc(40%/var(--timelineHeight)*100);
+            --timelineBullet: calc(-25% - 10px);
         }
         .dayTwo {
             background: linear-gradient(to top, #121314 50%, #191C1D);
             z-index: 2;
+            justify-content: space-around;
+            --timelineCardWidth: 36%;
+            --timelineCardHeight: calc(34%/var(--timelineHeight)*100);
+            --timelineBullet: calc(-700%/18 - 10px);
         }
         .swoosh {
             transform: rotateY(-90deg);
+        }
+        .timelineCardContainer {
+            width: 60%;
+            height: 90%;
+            position: relative;
+            .timeline__content {
+                position: relative;
+                width: var(--timelineCardWidth);
+                height: var(--timelineCardHeight);
+                background: white;
+                @extend %flex;
+                flex-direction: column;
+                justify-content: space-around;
+                z-index: 999;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+                picture {
+                    width: 80%;
+                    height: 60%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                p {
+                    color: black;
+                    width: 90%;
+                    text-align: center;
+                    font-size: clamp(0.7rem, 2vw, 1rem);
+                    font-family: var(--fontParagraph);
+                }
+                &:nth-of-type(odd) {
+                    float: left;
+                    clear: both;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: var(--timelineBullet);
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: rgb(255, 235, 60);
+                        animation: scroll 10s linear infinite;
+                        z-index: 2;
+                    }
+                }
+                &:nth-of-type(even) {
+                    float: right;
+                    clear: both;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: var(--timelineBullet);
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: rgb(255, 235, 60);
+                        animation: scroll 10s linear infinite;
+                        z-index: 2;
+                    }
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 5px;
+                height: 100%;
+                background: rgb(255, 235, 60);
+                animation: scroll 10s linear infinite;
+                transform: translateX(-50%);
+            }
         }
     }
 }
@@ -520,17 +606,105 @@ menu {
 //*The prizes section
 .prizes {
     @extend %section;
-    background: white;
-    .prizes__content {
-        width: 60%;
-        h1 {
-            color: black;
-            font-size: clamp(2rem, 5vw, 3.75rem);
-            font-family: var(--fontHeading);
+    .prizes__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./../img/fireworks1.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(1.5px);
         }
-        p {
-            color: black;
-            font-family: var(--fontParagraph);
+    }
+    .prizes__content {
+        z-index: 2;
+        width: 100%;
+        height: 90%;
+        color: white;
+        @extend %flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .prizes__heading {
+            width: 80%;
+            height: 15%;
+            @extend%flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            h2 {
+                font-family: var(--fontHeading);
+                width: 100%;
+                text-align: center;
+                font-size: clamp(1.25rem, 5vw, 2.75rem);
+            }
+            h4 {
+                width: 100%;
+                text-align: center;
+                font-family: var(--fontParagraph);
+                font-size: clamp(0.9rem, 3vw, 1.75rem);
+            }
+        }
+        .prizes__container {
+            width: 100%;
+            height: 60%;
+            @extend %flex;
+            justify-content: space-around;
+            .card {
+                width: 20%;
+                height: 80%;
+                background: #4d4d4d;
+                border: 2px solid white;
+                border-radius: 25px;
+                @extend %flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .img__container {
+                    width: 60%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transition: transform 1s ease-out;
+                        &:hover {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+                .description {
+                    width: 80%;
+                    @extend %flex;
+                    flex-direction: column;
+                    h3 {
+                        font-family: var(--fontHeading);
+                        font-size: clamp(1rem, 5vw, 2rem);
+                    }
+                    h5 {
+                        font-family: var(--fontParagraph);
+                        font-size: clamp(0.5rem, 5vw, 1.5rem);
+                    }
+                }
+            }
+        }
+        .certificate {
+            width: 80%;
+            height: 20%;
+            @extend%flex;
+            flex-direction: column;
+            h4 {
+                width: 100%;
+                text-align: center;
+                font-family: var(--fontParagraph);
+                font-size: clamp(0.9rem, 3vw, 1.75rem);
+            }
         }
     }
 }
@@ -827,3 +1001,5 @@ menu {
         transform: translateX(17.5%);
     }
 }
+
+////////////////////////////////!

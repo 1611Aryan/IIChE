@@ -6,12 +6,17 @@
         nav {
             picture {
                 margin-top: 0;
+                width: 18%;
+                height: 80%;
                 img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
             ul {
-                width: 70% !important;
+                width: 85%;
+                justify-content: space-around;
             }
         }
     }
@@ -118,6 +123,68 @@
     @keyframes fly {
         to {
             transform: translate(500%, 500%) skewX(-15deg);
+        }
+    }
+    .timeline {
+        .timeline__pageContainer {
+            .dayOne {
+                --timelineCardWidth: 40%;
+                --timelineCardHeight: calc(30%/var(--timelineHeight)*100) !important;
+                --timelineBullet: calc(-25% - 10px);
+            }
+            .dayTwo {
+                --timelineCardWidth: 36%;
+                --timelineCardHeight: calc(32%/var(--timelineHeight)*100);
+                --timelineBullet: calc(-700%/18 - 10px);
+            }
+            .timelineCardContainer {
+                width: 95%;
+                height: 90%;
+                position: relative;
+                .timeline__content {
+                    position: relative;
+                    width: var(--timelineCardWidth);
+                    height: var(--timelineCardHeight);
+                    picture {
+                        width: 80%;
+                        height: 60%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .prizes {
+        .prizes__content {
+            .prizes__heading {
+                width: 95%;
+                height: 15%;
+            }
+            .prizes__container {
+                height: 70%;
+                flex-direction: column;
+                .card {
+                    width: 80%;
+                    height: 30%;
+                    flex-direction: row;
+                    .img__container {
+                        height: 80%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain
+                        }
+                    }
+                }
+            }
+            .certificate {
+                width: 95%;
+                height: 20%;
+            }
         }
     }
     .register {
