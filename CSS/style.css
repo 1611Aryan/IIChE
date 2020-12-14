@@ -651,7 +651,7 @@ menu .linkIt {
 
 .timeline .timeline__pageContainer .timeline__page h1 {
   font-family: var(--fontHeading);
-  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
 }
 
 .timeline .timeline__pageContainer .timeline__page .timeline__date {
@@ -659,7 +659,7 @@ menu .linkIt {
   top: 50%;
   right: 0;
   font-family: var(--fontHeading);
-  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-size: clamp(2rem, 7vw, 4rem);
   -webkit-transform: rotateZ(90deg) translateY(-50%);
           transform: rotateZ(90deg) translateY(-50%);
 }

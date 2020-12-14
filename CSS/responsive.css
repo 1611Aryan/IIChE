@@ -156,6 +156,13 @@
               transform: translate(500%, 500%) skewX(-15deg);
     }
   }
+  .timeline .timeline__pageContainer .timeline__page .timeline__date {
+    position: relative;
+    top: 0;
+    font-family: var(--fontHeading);
+    -webkit-transform: none;
+            transform: none;
+  }
   .timeline .timeline__pageContainer .dayOne {
     --timelineCardWidth: 40%;
     --timelineCardHeight: calc(30%/var(--timelineHeight)*100) !important;

@@ -127,6 +127,14 @@
     }
     .timeline {
         .timeline__pageContainer {
+            .timeline__page {
+                .timeline__date {
+                    position: relative;
+                    top: 0;
+                    font-family: var(--fontHeading);
+                    transform: none;
+                }
+            }
             .dayOne {
                 --timelineCardWidth: 40%;
                 --timelineCardHeight: calc(30%/var(--timelineHeight)*100) !important;
