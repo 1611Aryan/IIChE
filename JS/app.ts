@@ -33,6 +33,7 @@ addEventListener('scroll', e => {
         IIChE_Content.classList.remove('restorePosition');
     }
 
+
 })
 
 const menuButton = $('#menu__toggle');

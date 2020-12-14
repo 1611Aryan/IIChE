@@ -498,12 +498,19 @@ menu {
             flex-direction: column;
             transform-origin: left;
             transform-style: preserve-3d;
-            border-radius: 0px 10px 10px 0px;
             color: white;
             cursor: pointer;
             h1 {
                 font-family: var(--fontHeading);
                 font-size: clamp(2.5rem, 7vw, 4rem);
+            }
+            .timeline__date {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                font-family: var(--fontHeading);
+                font-size: clamp(2.5rem, 7vw, 4rem);
+                transform: rotateZ(90deg) translateY(-50%);
             }
         }
         .dayOne {

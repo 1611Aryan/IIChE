@@ -645,7 +645,6 @@ menu .linkIt {
           transform-origin: left;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  border-radius: 0px 10px 10px 0px;
   color: white;
   cursor: pointer;
 }
@@ -653,6 +652,16 @@ menu .linkIt {
 .timeline .timeline__pageContainer .timeline__page h1 {
   font-family: var(--fontHeading);
   font-size: clamp(2.5rem, 7vw, 4rem);
+}
+
+.timeline .timeline__pageContainer .timeline__page .timeline__date {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-family: var(--fontHeading);
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  -webkit-transform: rotateZ(90deg) translateY(-50%);
+          transform: rotateZ(90deg) translateY(-50%);
 }
 
 .timeline .timeline__pageContainer .dayOne {
