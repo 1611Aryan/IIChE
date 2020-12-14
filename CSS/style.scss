@@ -500,6 +500,7 @@ menu {
             transform-style: preserve-3d;
             border-radius: 0px 10px 10px 0px;
             color: white;
+            cursor: pointer;
             h1 {
                 font-family: var(--fontHeading);
                 font-size: clamp(2.5rem, 7vw, 4rem);

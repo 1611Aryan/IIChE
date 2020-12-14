@@ -60,6 +60,9 @@ const dayOne = $('.dayOne');
 const dayTwo = $('.dayTwo');
 dayOne.addEventListener('click', () => {
     dayOne.classList.toggle('swoosh');
+    setTimeout(() => {
+        dayTwo.scrollIntoView();
+    }, 700);
 })
 dayTwo.addEventListener('click', () => {
     dayOne.classList.toggle('swoosh');

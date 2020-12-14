@@ -647,6 +647,7 @@ menu .linkIt {
           transform-style: preserve-3d;
   border-radius: 0px 10px 10px 0px;
   color: white;
+  cursor: pointer;
 }
 
 .timeline .timeline__pageContainer .timeline__page h1 {
